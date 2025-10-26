@@ -1,0 +1,65 @@
+@font-face {
+    font-family: Pixel;
+    src: url('../src/assets/fonts/PixelifySans-SemiBold.ttf');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: PixelB;
+    src: url('../src/assets/fonts/PixelifySans-Bold.ttf');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: PixelM;
+    src: url('../src/assets/fonts/PixelifySans-Medium.ttf');
+    font-weight: 500;
+}
+
+@import 'tailwindcss';
+
+@theme{
+    --font-pixel : Pixel, "sans-serif";
+}
+
+
+@theme{
+    --font-pixelb : PixelB, "sans-serif";
+}
+
+@theme{
+    --font-pixelm : PixelM, "sans-serif";
+}
+
+@keyframes typing {
+    0% {
+        width: 0em;
+    }
+    40% {
+        width: 3.3em; /* stops exactly after the comma */
+    }
+    60% {
+        width: 3.3em; /* hold position */
+    }
+    100% {
+        width: 0em;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.typewriter {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid #000;
+    animation: typing 4s steps(6, end) infinite, blink 0.7s step-end infinite;
+}
+
+
+
+
