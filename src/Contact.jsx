@@ -14,7 +14,6 @@ function Contact() {
         if (data.success) {
             const sendButtonText = document.getElementById("sendButton");
             sendButtonText.innerText = "Sent!";
-            // event.target.reset();
         }
     };
 
@@ -28,21 +27,23 @@ function Contact() {
     return (
         <div
             id="contact"
-            className="min-h-screen relative border-b-2 border-dashed border-black pb-16 md:pb-18 lg:pb-18 pt-16 md:pt-18 lg:pt-18">
-            <div className="w-full text-center text-3xl sm:text-4xl md:text-5xl font-pixelb text-nowrap pb-6">
+            className="min-h-screen relative border-b-2 border-dashed border-black pb-16 md:pb-18 lg:pb-18 pt-16 md:pt-18 lg:pt-18"
+        >
+            <div className="w-full text-center text-4xl sm:text-4xl md:text-5xl font-pixelb text-nowrap pb-6">
                 Let's Talk!
             </div>
-            <div className="mx-0 md:mx-4 lg:mx-0 text-lg md:text-2xl font-semibold mt-4 md:mt-6 lg:mt-8 w-full md:w-64 lg:w-140 lg:ml-58 mt-4">
+
+            <div className="text-xl w-[90vw] mx-auto flex flex-col text-center md:text-left md:mx-64 md:text-2xl font-semibold mt-4 md:mt-6 lg:mt-8 md:w-64 lg:w-140 ">
                 <p className="mb-2">Got an idea, opportunity or a challenge?</p>
                 <p>
-                    Don't worry, I have the skills to <span className="font-pixelm">make it happen!</span>
+                    Don't worry, I have the skills to{" "}
+                    <span className="block md:inline-block font-pixelm">make it happen!</span>
                 </p>
             </div>
-            <div className="w-[70%] mx-auto flex flex-col lg:flex-row gap-8 lg:gap-12 items-start lg:items-center px-4 md:px-8 lg:px-0">
-                {/* Left Side: Title, Paragraph, Form - Left-justified */}
+
+            <div className="w-[70%] mx-auto flex flex-col-reverse lg:flex-row gap-8 lg:gap-18 items-start lg:items-center px-4 md:px-8 lg:px-0">
+                {/* Left Side: Form */}
                 <div className="flex-1 order-2 lg:order-1">
-
-
                     <form
                         onSubmit={onSubmit}
                         className="mx-0 md:mx-4 lg:mx-0 mt-6 md:mt-9 flex flex-col gap-4 md:gap-6 text-lg md:text-xl w-full md:w-64 lg:w-108"
@@ -85,20 +86,24 @@ function Contact() {
                             Send
                         </button>
                     </form>
+                    <p className="font-pixelb text-4xl text-center -mb-6 mt-6 md:hidden">
+                        Or
+                    </p>
                 </div>
 
-                {/* Right Side: Social Icons in Zig-Zag Vertical Pattern */}
-                <div className="flex-1 w-full lg:w-1/2 flex flex-col items-end order-1 lg:order-2 gap-6 md:gap-8 lg:gap-10 relative">
-                    {/* Email Copy - Top, slight left tilt */}
-                    <div className="relative group hover:cursor-pointer self-end lg:self-end -rotate-3 md:-rotate-6">
+
+                {/* Right Side: Social Icons */}
+                <div className="relative flex-1 w-full flex flex-row lg:flex-col items-center justify-center lg:items-end order-1 lg:order-2 gap-10 md:gap-8 lg:gap-10">
+                    {/* Email Copy */}
+                    <div className="relative group hover:cursor-pointer -rotate-0 md:mx-[20px] md:-rotate-6 lg:-rotate-3">
                         <img
                             src="/Mail.svg"
                             alt="Mail logo"
-                            className="w-12 sm:w-16 md:w-20 lg:w-30 h-auto transition-transform duration-200 group-hover:scale-110"
+                            className="w-12 md:w-20 lg:w-30 h-auto transition-transform duration-200 group-hover:scale-110"
                         />
                         <p
                             id="email"
-                            className="absolute -top-1 -right-12 md:-right-16 lg:-right-20 text-sm sm:text-base md:text-lg font-pixelm text-nowrap transition-transform duration-200 group-hover:scale-110 text-center"
+                            className="absolute -bottom-6 left-1/2 -translate-x-1/2 text-xs sm:text-sm md:text-lg font-pixelm text-nowrap transition-transform duration-200 group-hover:scale-110 text-center"
                             onClick={() => {
                                 navigator.clipboard.writeText("parassharma8890@gmail.com");
                                 const emailText = document.getElementById("email");
@@ -112,41 +117,39 @@ function Contact() {
                         </p>
                     </div>
 
-                    {/* LinkedIn - Middle, slight right tilt */}
+                    {/* LinkedIn */}
                     <a
                         href="https://www.linkedin.com/in/paras-sharma-514a8426a/"
                         target="_blank"
-                        className="relative group self-start lg:self-start rotate-3 md:rotate-6"
+                        className="relative group rotate-0 md:rotate-6 lg:rotate-3"
                     >
                         <img
                             src="/linkedinlogo.svg"
                             alt="LinkedIn"
-                            className="w-12 sm:w-16 md:w-20 lg:w-32 mx-36 h-auto transition-transform duration-200 group-hover:scale-110"
+                            className="w-14 md:mx-[210px] md:w-20 lg:w-32 h-auto transition-transform duration-200 group-hover:scale-110"
                         />
                     </a>
 
-                    {/* Instagram - Lower middle, slight left tilt */}
+                    {/* Instagram */}
                     <a
                         href="https://www.instagram.com/parassharma1466/"
                         target="_blank"
-                        className="relative group self-end lg:self-end -rotate-3 md:-rotate-6"
+                        className="relative group -rotate-0 md:-rotate-6 lg:-rotate-3"
                     >
                         <img
                             src="/instagramLogo.svg"
                             alt="Instagram Logo"
-                            className="w-12 sm:w-16 md:w-20 lg:w-30 h-auto transition-transform duration-200 group-hover:scale-110"
+                            className="w-12 md:mx-[20px] md:w-20 lg:w-30 h-auto transition-transform duration-200 group-hover:scale-110"
                         />
                     </a>
+                </div>
 
-                    {/* Heart - Bottom, centered or slight right */}
-                    <div className="relative w-full items-center">
-                        <img
-                            src="/Heart.svg"
-                            alt="Heart icon"
-                            className="absolute w-8 sm:w-10 md:w-12 lg:w-18 mt-[35px] h-auto hover:cursor-pointer hover:scale-110 transition-transform duration-200"
-                            onClick={playBubbleSound}
-                        />
-                    </div>
+                <div className="hidden md:block md:absolute items-center justify-center left-1/2 top-[95%]">
+                    <img src="/Heart.svg"
+                    alt="Heart icon"
+                    className="w-20 hover:cursor-pointer hover:scale-110 transition-transform duration-200"
+                    onClick={playBubbleSound}
+                    />
                 </div>
             </div>
         </div>

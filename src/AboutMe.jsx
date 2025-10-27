@@ -26,7 +26,7 @@ function AboutMe() {
             id="about"
             className="bg-white pt-10 px-5 md:px-20 border-b-2 border-dashed border-black flex justify-center lg:mt-6"
         >
-            <div className="relative grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-12 items-start w-[90%] max-w-7xl mx-auto">
+            <div className="relative grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-12 items-start w-[75%] max-w-7xl mx-auto">
                 {/* Controller Image */}
                 <img
                     src="/controller.svg"
@@ -75,7 +75,7 @@ function AboutMe() {
                     src="/pacman.svg"
                     alt="Pacman Icon"
                     onClick={playPacmanSound}
-                    className="absolute mx-29 w-45 h-auto my-[-90px] lg:w-60 lg:my-[-130px] lg:mx-[880px] bottom-[-20px] lg:bottom-[-20px] md:bottom-[-140px] hover:cursor-pointer hover:scale-110 transition-transform duration-200"
+                    className="absolute mx-34 w-45 h-auto my-[-90px] lg:w-60 lg:my-[-130px] lg:mx-[960px] bottom-[-20px] lg:bottom-[-20px] md:bottom-[-140px] hover:cursor-pointer hover:scale-110 transition-transform duration-200"
                 />
             </div>
         </div>

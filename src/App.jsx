@@ -11,6 +11,8 @@ function App() {
         <NavBar/>
         <AboutMe/>
         <Skills/>
+        <Contact/>
+        <Footer/>
     </>
   )
 }

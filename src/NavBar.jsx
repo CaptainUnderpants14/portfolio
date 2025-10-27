@@ -22,7 +22,7 @@ function NavBar() {
                         <img
                             src="/BackButtons.svg"
                             alt="Logo"
-                            className="w-12 sm:w-[70px] h-auto hover:scale-110 transition-transform duration-200 cursor-pointer"
+                            className="w-14 md:w-[70px] h-auto hover:scale-110 transition-transform duration-200 cursor-pointer"
                             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                         />
                     </div>
