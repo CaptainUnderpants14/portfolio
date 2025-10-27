@@ -33,13 +33,15 @@ function Contact() {
                 Let's Talk!
             </div>
 
-            <div className="text-xl w-[90vw] mx-auto flex flex-col text-center md:text-left md:mx-64 md:text-2xl font-semibold mt-4 md:mt-6 lg:mt-8 md:w-64 lg:w-140 ">
+            <div className="text-xl w-[90%] mx-auto flex flex-col text-center md:text-left md:ml-[228px] md:w-auto md:text-2xl font-semibold mt-4 md:mt-6 lg:mt-8">
                 <p className="mb-2">Got an idea, opportunity or a challenge?</p>
                 <p>
                     Don't worry, I have the skills to{" "}
                     <span className="block md:inline-block font-pixelm">make it happen!</span>
                 </p>
             </div>
+
+
 
             <div className="w-[70%] mx-auto flex flex-col-reverse lg:flex-row gap-8 lg:gap-18 items-start lg:items-center px-4 md:px-8 lg:px-0">
                 {/* Left Side: Form */}
