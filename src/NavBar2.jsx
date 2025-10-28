@@ -130,12 +130,12 @@ const NavBar2 = () => {
                 />
             )}
 
-            <div className="relative w-full pt-25 h-80 bg-[#E2CDF4] border-b-2 border-dashed border-black md:pt-20 md:h-auto md:pt-24 lg:pt-34 pb-10">
+            <div className="relative w-full pt-25 h-84 bg-[#E2CDF4] border-b-2 border-dashed border-black pb-10 md:h-auto md:pt-24 lg:pt-34">
                 <div className="w-[80%] max-w-7xl mx-auto flex flex-col lg:flex-row items-start justify-between mt-8 md:mt-17 md:mb-10 gap-8 lg:gap-0">
                     <div className="flex flex-col items-start w-full max-w-2xl">
-                        <p className="font-pixel text-4xl sm:text-4xl md:text-6xl lg:text-8xl typewriter">Hello,</p>
-                        <p className="text-3xl sm:text-3xl md:text-5xl lg:text-[55px] font-bold tracking-wider mt-2">I'm Paras Sharma,</p>
-                        <p className="text-xl sm:text-xl md:text-3xl lg:text-3xl font-bold tracking-wider text-gray-700 mt-1">
+                        <p className="font-pixel text-5xl md:text-6xl lg:text-8xl typewriter">Hello,</p>
+                        <p className="text-4xl md:text-5xl lg:text-[55px] font-bold tracking-wider mt-2">I'm Paras Sharma,</p>
+                        <p className="text-2xl md:text-3xl lg:text-3xl font-bold tracking-wider text-gray-700 mt-1">
                             A Full Stack Web Developer.
                         </p>
                     </div>

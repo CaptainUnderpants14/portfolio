@@ -34,11 +34,11 @@ function Skills() {
 
             {/* Skills Section Container */}
             <div className="w-[85%] mx-auto pt-7 md:w-[75%]">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-xl justify-items-center">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-16 text-xl justify-items-center">
                     {/* Frontend */}
-                    <div className="bg-white/10 backdrop-blur-sm rounded-xl shadow-xl border border-gray-300 w-[90%] md:w-[74%] h-[26rem] flex flex-col justify-center text-center p-6">
-                        <h3 className="font-pixelm text-2xl mb-6">Frontend</h3>
-                        <ul className="flex flex-col gap-5 justify-left">
+                    <div className="bg-white/10 backdrop-blur-sm rounded-xl shadow-xl border border-gray-300 w-[90%] md:w-[74%] h-[480px] flex flex-col justify-center text-center p-6">
+                        <h3 className="font-pixelm text-4xl mb-6">Frontend</h3>
+                        <ul className="flex flex-col gap-8 justify-left text-2xl">
                             <li className="flex items-center gap-3 lg: mx-8">
                                 <img className="w-7 h-auto" src="/HTMLlogo.svg" alt="HTML" />
                                 Html
@@ -63,9 +63,9 @@ function Skills() {
                     </div>
 
                     {/* Backend */}
-                    <div className="bg-white/10 backdrop-blur-sm rounded-xl shadow-xl border border-gray-300 w-[90%] md:w-[74%] h-[26rem] flex flex-col justify-center text-center p-6">
-                        <h3 className="font-pixelm text-2xl mb-6">Backend</h3>
-                        <ul className="flex flex-col gap-5 justify-left">
+                    <div className="bg-white/10 backdrop-blur-sm rounded-xl shadow-xl border border-gray-300 w-[90%] md:w-[74%] h-[480px] flex flex-col justify-center text-center p-6">
+                        <h3 className="font-pixelm text-4xl mb-6">Backend</h3>
+                        <ul className="flex flex-col gap-8 justify-left text-2xl">
                             <li className="flex items-center gap-3 lg: mx-8">
                                 <img className="w-7 h-auto" src="/Javalogo.svg" alt="Java" />
                                 Java
@@ -90,9 +90,9 @@ function Skills() {
                     </div>
 
                     {/* DevOps */}
-                    <div className="bg-white/10 backdrop-blur-sm rounded-xl shadow-xl border border-gray-300 w-[90%] md:w-[68%] h-[20rem] flex flex-col justify-center text-center p-6">
-                        <h3 className="font-pixelm text-2xl mb-6">DevOps</h3>
-                        <ul className="flex flex-col gap-5 justify-left">
+                    <div className="bg-white/10 backdrop-blur-sm rounded-xl shadow-xl border border-gray-300 w-[90%] md:w-[68%] h-[360px] flex flex-col justify-center text-center p-6">
+                        <h3 className="font-pixelm text-4xl mb-6">DevOps</h3>
+                        <ul className="flex flex-col gap-8 justify-left">
                             <li className="flex items-center gap-3 font-semibold lg: mx-8">
                                 <img className="w-7 h-auto" src="/DockerLogo.svg" alt="Docker" />
                                 Docker

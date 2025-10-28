@@ -59,7 +59,7 @@ function AboutMe() {
 
                     {/* Experience Box */}
                     <ul className="flex flex-col gap-4 justify-center text-2xl md:block md:text-xl lg:text-3xl text-black font-semibold border-4 bg-[#E2CDF4]/90
-                    border-[#E2CDF4]/80 w-70 h-80 mt-6 md:mt-0 rounded-lg p-6 md:p-[47px] shadow-xl text-center space-y-6
+                    border-[#E2CDF4]/80 w-70 h-92 mt-6 md:mt-0 rounded-lg p-6 md:p-[47px] shadow-xl text-center space-y-6
                     md:space-y-10 mx-auto lg:mx-0 max-w-xs lg:w-70 lg:h-100">
                         <li className="pb-2 md:pb-[13px]">2+ Years of experience</li>
                         <li className="pb-2 md:pb-[13px]">9+ Projects</li>
@@ -69,7 +69,7 @@ function AboutMe() {
 
                     {/* Points Box */}
                     <ul className="flex flex-col gap-4 justify-center text-2xl md:block md:text-xl lg:text-3xl text-black font-semibold border-4 bg-[#fef6ce]/90
-                    border-[#fef6ce]/80 w-70 h-80 mt-6 md:mt-0 rounded-lg p-6 md:p-[47px] shadow-xl text-center space-y-6
+                    border-[#fef6ce]/80 w-70 h-92 mt-6 md:mt-0 rounded-lg p-6 md:p-[47px] shadow-xl text-center space-y-6
                     md:space-y-10 mx-auto lg:mx-0 max-w-xs lg:w-70 lg:h-100">
                         <li className="pb-2 md:pb-[13px]">2+ Years of experience</li>
                         <li className="pb-2 md:pb-[13px]">9+ Projects</li>
