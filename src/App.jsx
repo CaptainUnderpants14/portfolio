@@ -1,18 +1,14 @@
 import './App.css'
-import NavBar from "./NavBar.jsx";
+import NavBar2 from "./NavBar2.jsx";
 import AboutMe from "./AboutMe.jsx";
 import Skills from "./Skills.jsx";
-import Contact from "./Contact.jsx";
-import Footer from "./Footer.jsx";
 
 function App() {
   return (
     <>
-        <NavBar/>
+        <NavBar2/>
         <AboutMe/>
         <Skills/>
-        <Contact/>
-        <Footer/>
     </>
   )
 }
