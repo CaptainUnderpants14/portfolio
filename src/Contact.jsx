@@ -89,7 +89,7 @@ function Contact() {
 
 
                 {/* Right Side: Social Icons */}
-                <div className="relative flex-1 w-full flex flex-row md:flex-col items-center justify-between gap-10 order-1 lg:order-2">
+                <div className="relative flex-1 w-full flex flex-row md:flex-col md:-mt-16 items-center justify-between gap-4 order-1 lg:order-2">
                     {/* Email Copy */}
                     <div className="relative group md:self-start">
                         <button
@@ -130,7 +130,7 @@ function Contact() {
                             <img
                                 src="/Mail.svg"
                                 alt="Mail logo"
-                                className="hidden md:block w-12 md:w-16 lg:w-20 h-auto transition-transform duration-200 group-hover:scale-110"
+                                className="hidden md:block w-12 md:w-22 lg:w-20 h-auto transition-transform duration-200 group-hover:scale-110"
                             />
                             <p
                                 id="email"
@@ -142,7 +142,7 @@ function Contact() {
                             <img
                                 src="/Mail.svg"
                                 alt="Mail logo"
-                                className="w-12 md:w-16 lg:w-20 h-auto transition-transform duration-200 group-hover:scale-110"
+                                className="w-12 md:w-22 lg:w-20 h-auto transition-transform duration-200 group-hover:scale-110"
                             />
                         </a>
                     </div>
@@ -155,7 +155,7 @@ function Contact() {
                         <img
                             src="/linkedinlogo.svg"
                             alt="LinkedIn"
-                            className="w-12 md:w-16 lg:w-20 h-auto transition-transform duration-200 group-hover:scale-110"
+                            className="w-12 md:w-22 lg:w-24 h-auto transition-transform duration-200 group-hover:scale-110"
                         />
                     </a>
 
@@ -167,7 +167,7 @@ function Contact() {
                         <img
                             src="/Github%20icon.png"
                             alt="Github Logo"
-                            className="w-10 md:w-16 lg:w-20 h-auto transition-transform duration-200 group-hover:scale-110"
+                            className="w-10 md:w-22 lg:w-20 h-auto transition-transform duration-200 group-hover:scale-110"
                         />
                     </a>
 
@@ -179,7 +179,7 @@ function Contact() {
                         <img
                             src="/instagramLogo.svg"
                             alt="Instagram Logo"
-                            className="w-10 md:w-16 lg:w-20 h-auto transition-transform duration-200 group-hover:scale-110"
+                            className="w-10 md:w-22 lg:w-20 h-auto transition-transform duration-200 group-hover:scale-110"
                         />
                     </a>
                 </div>
