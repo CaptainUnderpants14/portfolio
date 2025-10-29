@@ -35,7 +35,7 @@ function AboutMe() {
                     className="absolute -top-14 left-16 w-24 md:w-28 lg:w-40 h-auto hover:cursor-pointer hover:scale-110 transition-transform duration-200 md:-top-16 md:left-40 lg:-top-28 lg:left-80"
                 />
 
-                <div className="relative grid grid-cols-1 mb-24 md:mb-16 md:grid-cols-3 gap-10 md:gap-16 items-start pt-12">
+                <div className="relative grid grid-cols-1 mb-24 md:mb-16 md:grid-cols-3 gap-10 md:gap-10 items-start pt-12">
                     {/* About Me Text */}
                     <div className="flex flex-col justify-start space-y-4 md:space-y-6 text-center lg:text-left col-span-1">
                         <div className="relative flex justify-center lg:justify-start items-center -top-8 md:top-0">
@@ -63,9 +63,9 @@ function AboutMe() {
 
                     {/* Experience Box */}
                     <ul
-                        className="flex flex-col items-center justify-center text-xl md:text-lg lg:text-3xl
+                        className="flex flex-col items-center justify-center text-xl gap-4
                              text-black font-semibold border-4 bg-[#E2CDF4]/90 border-[#E2CDF4]/80
-                             w-[84%] h-full md:w-full mt-6 md:mt-0 rounded-lg p-10 md:p-[47px]
+                             w-[84%] h-full md:w-full md:h-[92%] mt-6 md:mt-0 rounded-lg p-10 md:p-[47px]
                              shadow-xl text-center space-y-6 md:space-y-10 mx-auto lg:mx-0 max-w-xs lg:w-70 lg:h-100">
                         <li>2+ Years of experience</li>
                         <li>9+ Projects</li>
@@ -76,9 +76,9 @@ function AboutMe() {
 
 
                     {/* Points Box */}
-                    <ul className="flex flex-col items-center justify-center text-xl md:text-lg lg:text-3xl
+                    <ul className="flex flex-col items-center justify-center text-xl gap-4 md:text-xl lg:text-3xl
                              text-black font-semibold border-4 bg-[#fef6ce]/90 border-[#fef6ce]/80
-                             w-[84%] h-full md:w-full mt-6 md:mt-0 rounded-lg p-10 md:p-[47px]
+                             w-[84%] h-full md:w-full md:h-[92%] mt-6 md:mt-0 rounded-lg p-10 md:p-[47px]
                              shadow-xl text-center space-y-6 md:space-y-10 mx-auto lg:mx-0 max-w-xs lg:w-70 lg:h-100">
                         <li>9+ Projects</li>
                         <li>2+ Years of experience</li>

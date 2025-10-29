@@ -126,28 +126,31 @@ const NavBar2 = () => {
                 />
             )}
 
-            <div className="relative w-full pt-25 h-90 bg-[#E2CDF4] border-b-2 border-dashed border-black pb-10 md:h-auto md:pt-24 lg:pt-34">
-                <div className="w-[80%] max-w-7xl mx-auto flex flex-col lg:flex-row items-start justify-between mt-8 md:mt-17 md:mb-10 gap-8 lg:gap-0">
-                    <div className="flex flex-col items-start w-full max-w-2xl">
+            <div className="w-full bg-[#E2CDF4] border-b-2 border-dashed border-black">
+                <div className="w-[80%] h-90 mx-auto flex flex-col md:flex-row items-start justify-evenly gap-8 md:h-100 lg:gap-0">
+                    <div className="flex flex-col justify-center items-start w-full mx-auto pt-14 md:pt-40">
                         <p className="font-pixel text-5xl md:text-6xl lg:text-8xl typewriter">Hello,</p>
                         <p className="text-4xl md:text-5xl lg:text-[55px] font-bold tracking-wider mt-2">I'm Paras Sharma,</p>
                         <p className="text-2xl md:text-3xl lg:text-3xl font-bold tracking-wider text-gray-700 mt-1">
                             A Full Stack Web Developer.
                         </p>
                     </div>
-                    <div className="hidden lg:flex flex-col items-end space-y-2 md:space-y-4 lg:space-y-8 w-full lg:w-auto lg:max-w-xs">
-                        <img
-                            className="w-48 md:w-[250px] h-auto hover:scale-105 transition-transform duration-200 -mt-4 md:-mt-8 lg:-mt-26 hidden lg:block"
-                            src="/Screen3.svg"
-                            alt="Screen"
-                        />
-                        <img
-                            className="w-32 md:w-[170px] h-auto hover:scale-105 transition-transform rotate-4 duration-200 cursor-pointer mx-12 -mt-4 md:-mt-8 lg:-mt-36 hidden lg:block"
-                            src="/Keyboard6.svg"
-                            alt="Keyboard"
-                            onClick={playKeyboardClickSound}
-                        />
-                    </div>
+                </div>
+                <div className="hidden md:block relative -top-72 -right-[72%]">
+                    {/* Screen Image */}
+                    <img
+                        src="/Screen3.svg"
+                        alt="Screen"
+                        className="hidden md:block absolute md:w-40 lg:w-48 h-auto hover:scale-105 transition-transform duration-200"
+                    />
+
+                    {/* Keyboard Image */}
+                    <img
+                        src="/Keyboard6.svg"
+                        alt="Keyboard"
+                        onClick={playKeyboardClickSound}
+                        className="hidden md:block absolute top-30 left-6 w-32 md:w-26 lg:w-44 h-auto hover:scale-105 rotate-2 transition-transform duration-200 cursor-pointer"
+                    />
                 </div>
             </div>
         </>

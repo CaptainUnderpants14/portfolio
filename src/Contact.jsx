@@ -21,28 +21,28 @@ function Contact() {
     return (
         <div
             id="contact"
-            className="min-h-screen relative border-b-2 border-dashed border-black pb-12 md:pb-18 lg:pb-18 pt-16 md:pt-18 lg:pt-18"
+            className="min-h-screen relative border-b-2 border-dashed border-black pb-12 md:pb-18 md:px-12 lg:pb-18 pt-16 md:pt-18 lg:pt-18"
         >
             <div className="w-full text-center text-5xl md:text-5xl font-pixelb text-nowrap pb-6">
                 Let's Talk!
             </div>
 
-            <div className="text-xl w-[90%] mx-auto flex flex-col text-center md:text-left md:ml-[228px] md:w-auto md:text-2xl font-semibold mt-4 md:mt-6 lg:mt-8">
+            <div className="text-xl w-[90%] mx-auto flex flex-col items-center md:w-full md:items-start md:text-2xl font-semibold mt-4 md:px-8 md:mt-6 lg:mt-8" >
                 <p className="mb-2">Got an idea, opportunity or a challenge?</p>
                 <p>
                     Don't worry, I have the skills to{" "}
-                    <span className="block md:inline-block font-pixelm">make it happen!</span>
+                    <span className="text-center md:text-left block font-pixelm pt-2 pb-12">make it happen!</span>
                 </p>
             </div>
 
 
 
-            <div className="w-[80%] md:w-[70%] mx-auto flex flex-col-reverse lg:flex-row gap-8 lg:gap-18 lg:items-center px-4 md:px-8 lg:px-0">
+            <div className="w-[80%] md:w-full mx-auto flex flex-col-reverse md:flex-row-reverse lg:flex-row gap-8 md:gap-44 lg:gap-18 lg:items-center px-4 md:px-8 lg:px-0">
                 {/* Left Side: Form */}
                 <div className="flex-1 order-2 lg:order-1">
                     <form
                         onSubmit={onSubmit}
-                        className="mx-0 md:mx-4 lg:mx-0 mt-6 md:mt-9 flex flex-col gap-6 md:gap-6 text-m md:text-xl w-full md:w-64 lg:w-108"
+                        className="md:mt-9 flex flex-col gap-6 md:gap-6 text-m md:text-xl w-full md:w-92 lg:w-108"
                     >
                         <label className="flex flex-col gap-1 md:gap-2">
                             <span className="font-semibold">Your Name</span>
@@ -77,7 +77,7 @@ function Contact() {
                         <button
                             id="sendButton"
                             type="submit"
-                            className="w-24 md:w-20 lg:w-24 py-2 md:py-3 mt-1 font-pixelm text-lg md:text-2xl shadow-[0_0_10px_#89F336] h-12 md:h-12 lg:h-14 rounded-full bg-[#89F336] hover:scale-110 transition-transform duration-200"
+                            className="w-24 md:w-32 lg:w-24 py-2  mt-1 font-pixelm text-lg md:text-2xl shadow-[0_0_10px_#89F336] h-12 md:h-12 lg:h-14 rounded-full bg-[#89F336] hover:scale-110 transition-transform duration-200"
                         >
                             Send
                         </button>
@@ -89,9 +89,9 @@ function Contact() {
 
 
                 {/* Right Side: Social Icons */}
-                <div className="relative flex-1 w-full flex flex-row md:flex-col items-center justify-evenly gap-10 order-1 lg:order-2">
+                <div className="relative flex-1 w-full flex flex-row md:flex-col items-center justify-between gap-10 order-1 lg:order-2">
                     {/* Email Copy */}
-                    <div className="relative group">
+                    <div className="relative group md:self-start ">
                         <button
                             className="flex flex-col items-center focus:outline-none hover:cursor-pointer"
                             onClick={() => {
@@ -126,8 +126,7 @@ function Contact() {
                                         emailText.innerText = "Copy Email";
                                     }, 15000);
                                 }
-                            }}
-                        >
+                            }}>
                             <img
                                 src="/Mail.svg"
                                 alt="Mail logo"
@@ -135,13 +134,11 @@ function Contact() {
                             />
                             <p
                                 id="email"
-                                className="hidden md:block text-xs sm:text-sm md:text-lg font-pixelm text-nowrap transition-transform duration-200 group-hover:scale-110 text-center mt-1"
-                            >
+                                className="hidden md:block text-xs sm:text-sm md:text-lg font-pixelm text-nowrap transition-transform duration-200 group-hover:scale-110 text-center mt-1">
                                 Copy Email
                             </p>
                         </button>
-                        <a className="md:hidden"
-                           href="mailto:parassharma8890@gmail.com?subject=Hey, I wanted to ask about ...">
+                        <a className="md:hidden" href="mailto:parassharma8890@gmail.com?subject=Inquiring about ...">
                             <img
                                 src="/Mail.svg"
                                 alt="Mail logo"
@@ -154,8 +151,7 @@ function Contact() {
                     <a
                         href="https://www.linkedin.com/in/paras-sharma-514a8426a/"
                         target="_blank"
-                        className="group"
-                    >
+                        className="group md:self-end">
                         <img
                             src="/linkedinlogo.svg"
                             alt="LinkedIn"
@@ -163,12 +159,11 @@ function Contact() {
                         />
                     </a>
 
-                    {/*GitHub*/}
+                    {/* GitHub */}
                     <a
                         href="https://github.com/CaptainUnderpants14"
                         target="_blank"
-                        className="group"
-                    >
+                        className="group md:self-start">
                         <img
                             src="/Github%20icon.png"
                             alt="Github Logo"
@@ -180,16 +175,15 @@ function Contact() {
                     <a
                         href="https://www.instagram.com/parassharma1466/"
                         target="_blank"
-                        className="group"
-                    >
+                        className="group md:self-end">
                         <img
                             src="/instagramLogo.svg"
                             alt="Instagram Logo"
                             className="w-10 md:w-16 lg:w-20 h-auto transition-transform duration-200 group-hover:scale-110"
                         />
                     </a>
-
                 </div>
+
             </div>
         </div>
     );

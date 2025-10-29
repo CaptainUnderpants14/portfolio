@@ -116,13 +116,13 @@ function Skills() {
                     src="/Phone.svg"
                     alt="Phone icon"
                     onClick={playDialerSound}
-                    className="absolute w-16 top-4 left-12 md:w-30 md:left-40 h-auto hover:cursor-pointer hover:scale-110 transition-transform duration-200"
+                    className="absolute w-16 top-4 left-12 md:w-24 md:left-20 h-auto hover:cursor-pointer hover:scale-110 transition-transform duration-200"
                 />
                 <img
                     src="/convoBubble.svg"
                     alt="Text bubble icon"
                     onClick={playMessageSound}
-                    className="absolute w-20 -top-4 right-8 md:w-38 md:right-60 md:-top-8 h-auto hover:cursor-pointer hover:scale-110 transition-transform duration-200"
+                    className="absolute w-20 -top-4 right-8 md:w-32 md:right-24 md:-top-8 h-auto hover:cursor-pointer hover:scale-110 transition-transform duration-200"
                 />
             </div>
         </div>
