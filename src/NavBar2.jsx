@@ -44,26 +44,22 @@ const NavBar2 = () => {
                     <ul className="hidden md:flex gap-6 lg:gap-10 text-xl lg:text-2xl font-medium items-center">
                         <li
                             className="font-bold text-black cursor-pointer hover:scale-110 transition-transform duration-200 whitespace-nowrap"
-                            onClick={() => scrollToSection("about")}
-                        >
+                            onClick={() => scrollToSection("about")}>
                             About
                         </li>
                         <li
                             className="font-bold text-black cursor-pointer hover:scale-110 transition-transform duration-200 whitespace-nowrap"
-                            onClick={() => scrollToSection("skills")}
-                        >
+                            onClick={() => scrollToSection("skills")}>
                             Skills
                         </li>
                         <li
                             className="font-bold text-black cursor-pointer hover:scale-110 transition-transform duration-200 whitespace-nowrap"
-                            onClick={() => scrollToSection("projects")}
-                        >
+                            onClick={() => scrollToSection("projects")}>
                             Projects
                         </li>
                         <li
                             className="font-bold text-black cursor-pointer hover:scale-110 transition-transform duration-200 whitespace-nowrap"
-                            onClick={() => scrollToSection("contact")}
-                        >
+                            onClick={() => scrollToSection("contact")}>
                             Contact
                         </li>
                     </ul>

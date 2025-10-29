@@ -37,7 +37,7 @@ function Contact() {
 
 
 
-            <div className="w-[70%] md:w-[70%] mx-auto flex flex-col-reverse lg:flex-row gap-8 lg:gap-18 lg:items-center px-4 md:px-8 lg:px-0">
+            <div className="w-[80%] md:w-[70%] mx-auto flex flex-col-reverse lg:flex-row gap-8 lg:gap-18 lg:items-center px-4 md:px-8 lg:px-0">
                 {/* Left Side: Form */}
                 <div className="flex-1 order-2 lg:order-1">
                     <form
@@ -128,14 +128,22 @@ function Contact() {
                                 }
                             }}
                         >
+                            <a className="md:hidden"
+                                href="mailto:parassharma8890@gmail.com">
+                                <img
+                                    src="/Mail.svg"
+                                    alt="Mail logo"
+                                    className="w-12 md:w-16 lg:w-20 h-auto transition-transform duration-200 group-hover:scale-110"
+                                />
+                            </a>
                             <img
                                 src="/Mail.svg"
                                 alt="Mail logo"
-                                className="w-10 md:w-16 lg:w-20 h-auto transition-transform duration-200 group-hover:scale-110"
+                                className="hidden md:block w-12 md:w-16 lg:w-20 h-auto transition-transform duration-200 group-hover:scale-110"
                             />
                             <p
                                 id="email"
-                                className="text-xs sm:text-sm md:text-lg font-pixelm text-nowrap transition-transform duration-200 group-hover:scale-110 text-center mt-1"
+                                className="hidden md:block text-xs sm:text-sm md:text-lg font-pixelm text-nowrap transition-transform duration-200 group-hover:scale-110 text-center mt-1"
                             >
                                 Copy Email
                             </p>
@@ -151,6 +159,19 @@ function Contact() {
                         <img
                             src="/linkedinlogo.svg"
                             alt="LinkedIn"
+                            className="w-12 md:w-16 lg:w-20 h-auto transition-transform duration-200 group-hover:scale-110"
+                        />
+                    </a>
+
+                    {/*GitHub*/}
+                    <a
+                        href="https://www.instagram.com/parassharma1466/"
+                        target="_blank"
+                        className="group"
+                    >
+                        <img
+                            src="/Github%20icon.png"
+                            alt="Github Logo"
                             className="w-10 md:w-16 lg:w-20 h-auto transition-transform duration-200 group-hover:scale-110"
                         />
                     </a>
@@ -167,6 +188,7 @@ function Contact() {
                             className="w-10 md:w-16 lg:w-20 h-auto transition-transform duration-200 group-hover:scale-110"
                         />
                     </a>
+
                 </div>
             </div>
         </div>
