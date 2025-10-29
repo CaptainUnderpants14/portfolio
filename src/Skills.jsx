@@ -92,7 +92,7 @@ function Skills() {
                     {/* DevOps */}
                     <div className="bg-white/10 backdrop-blur-sm rounded-xl shadow-xl border border-gray-300 w-[90%] md:w-[68%] h-[360px] flex flex-col justify-center text-center p-6">
                         <h3 className="font-pixelm text-4xl mb-6">DevOps</h3>
-                        <ul className="flex flex-col gap-8 justify-left">
+                        <ul className="flex flex-col gap-8 justify-left text-2xl">
                             <li className="flex items-center gap-3 font-semibold lg: mx-8">
                                 <img className="w-7 h-auto" src="/DockerLogo.svg" alt="Docker" />
                                 Docker

@@ -21,13 +21,13 @@ function Contact() {
     return (
         <div
             id="contact"
-            className="min-h-screen relative border-b-2 border-dashed border-black pb-16 md:pb-18 lg:pb-18 pt-16 md:pt-18 lg:pt-18"
+            className="min-h-screen relative border-b-2 border-dashed border-black pb-12 md:pb-18 lg:pb-18 pt-16 md:pt-18 lg:pt-18"
         >
             <div className="w-full text-center text-5xl md:text-5xl font-pixelb text-nowrap pb-6">
                 Let's Talk!
             </div>
 
-            <div className="text-2xl w-[90%] mx-auto flex flex-col text-center md:text-left md:ml-[228px] md:w-auto md:text-2xl font-semibold mt-4 md:mt-6 lg:mt-8">
+            <div className="text-xl w-[90%] mx-auto flex flex-col text-center md:text-left md:ml-[228px] md:w-auto md:text-2xl font-semibold mt-4 md:mt-6 lg:mt-8">
                 <p className="mb-2">Got an idea, opportunity or a challenge?</p>
                 <p>
                     Don't worry, I have the skills to{" "}
@@ -42,7 +42,7 @@ function Contact() {
                 <div className="flex-1 order-2 lg:order-1">
                     <form
                         onSubmit={onSubmit}
-                        className="mx-0 md:mx-4 lg:mx-0 mt-6 md:mt-9 flex flex-col gap-6 md:gap-6 text-lg md:text-xl w-full md:w-64 lg:w-108"
+                        className="mx-0 md:mx-4 lg:mx-0 mt-6 md:mt-9 flex flex-col gap-6 md:gap-6 text-m md:text-xl w-full md:w-64 lg:w-108"
                     >
                         <label className="flex flex-col gap-1 md:gap-2">
                             <span className="font-semibold">Your Name</span>
@@ -89,23 +89,16 @@ function Contact() {
 
 
                 {/* Right Side: Social Icons */}
-                <div className="relative flex-1 w-full flex flex-row lg:flex-col items-start md:items-center justify-center lg:items-end order-1 lg:order-2 gap-24 md:gap-8 lg:gap-10">
+                <div className="relative flex-1 w-full flex flex-row md:flex-col items-center justify-center gap-10 order-1 lg:order-2">
                     {/* Email Copy */}
-                    {/* Email Copy */}
-                    <div className="relative group md:mx-[20px] md:-rotate-6 lg:-rotate-3">
+                    <div className="relative group">
                         <button
-                            className="flex flex-col items-center focus:outline-none hover:cursor-pointer -rotate-0"
+                            className="flex flex-col items-center focus:outline-none hover:cursor-pointer"
                             onClick={() => {
                                 const email = "parassharma8890@gmail.com";
-                                // Try using Clipboard API
                                 if (navigator.clipboard && window.isSecureContext) {
-                                    navigator.clipboard.writeText(email).then(() => {
-                                        showCopiedMessage();
-                                    }).catch(() => {
-                                        fallbackCopyTextToClipboard(email);
-                                    });
+                                    navigator.clipboard.writeText(email).then(showCopiedMessage).catch(() => fallbackCopyTextToClipboard(email));
                                 } else {
-                                    // Fallback for older browsers or insecure contexts
                                     fallbackCopyTextToClipboard(email);
                                 }
 
@@ -138,7 +131,7 @@ function Contact() {
                             <img
                                 src="/Mail.svg"
                                 alt="Mail logo"
-                                className="w-12 md:w-20 lg:w-30 h-auto transition-transform duration-200 group-hover:scale-110"
+                                className="w-10 md:w-16 lg:w-20 h-auto transition-transform duration-200 group-hover:scale-110"
                             />
                             <p
                                 id="email"
@@ -149,17 +142,16 @@ function Contact() {
                         </button>
                     </div>
 
-
                     {/* LinkedIn */}
                     <a
                         href="https://www.linkedin.com/in/paras-sharma-514a8426a/"
                         target="_blank"
-                        className="relative group rotate-0 md:rotate-6 lg:rotate-3"
+                        className="group"
                     >
                         <img
                             src="/linkedinlogo.svg"
                             alt="LinkedIn"
-                            className="w-14 md:mx-[210px] md:w-20 lg:w-32 h-auto transition-transform duration-200 group-hover:scale-110"
+                            className="w-10 md:w-16 lg:w-20 h-auto transition-transform duration-200 group-hover:scale-110"
                         />
                     </a>
 
@@ -167,12 +159,12 @@ function Contact() {
                     <a
                         href="https://www.instagram.com/parassharma1466/"
                         target="_blank"
-                        className="relative group -rotate-0 md:-rotate-6 lg:-rotate-3"
+                        className="group"
                     >
                         <img
                             src="/instagramLogo.svg"
                             alt="Instagram Logo"
-                            className="w-12 md:mx-[20px] md:w-20 lg:w-30 h-auto transition-transform duration-200 group-hover:scale-110"
+                            className="w-10 md:w-16 lg:w-20 h-auto transition-transform duration-200 group-hover:scale-110"
                         />
                     </a>
                 </div>

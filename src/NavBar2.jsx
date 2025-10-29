@@ -130,7 +130,7 @@ const NavBar2 = () => {
                 />
             )}
 
-            <div className="relative w-full pt-25 h-84 bg-[#E2CDF4] border-b-2 border-dashed border-black pb-10 md:h-auto md:pt-24 lg:pt-34">
+            <div className="relative w-full pt-25 h-90 bg-[#E2CDF4] border-b-2 border-dashed border-black pb-10 md:h-auto md:pt-24 lg:pt-34">
                 <div className="w-[80%] max-w-7xl mx-auto flex flex-col lg:flex-row items-start justify-between mt-8 md:mt-17 md:mb-10 gap-8 lg:gap-0">
                     <div className="flex flex-col items-start w-full max-w-2xl">
                         <p className="font-pixel text-5xl md:text-6xl lg:text-8xl typewriter">Hello,</p>
