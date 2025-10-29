@@ -48,7 +48,7 @@ function AboutMe() {
                                 About Me
                             </h2>
                         </div>
-                        <p className="text-xl md:text-lg lg:text-[20px] leading-relaxed max-w-[360px] text-justify mx-auto lg:mx-0 lg:w-63 lg:h-97">
+                        <p className="text-xl md:text-lg lg:text-[20px] leading-relaxed w-[90%] text-justify mx-auto lg:mx-0 lg:w-63 lg:h-97">
                             <span className="font-semibold">Welcome to my portfolio</span>, I'm a
                             full-stack Web developer based in Noida. I build scalable, efficient, and maintainable
                             web applications, handling both <span className="font-semibold">backend</span> and{" "}
@@ -58,22 +58,24 @@ function AboutMe() {
                     </div>
 
                     {/* Experience Box */}
-                    <ul className="flex flex-col gap-4 justify-center text-2xl md:block md:text-xl lg:text-3xl text-black font-semibold border-4 bg-[#E2CDF4]/90
-                    border-[#E2CDF4]/80 w-70 h-92 mt-6 md:mt-0 rounded-lg p-6 md:p-[47px] shadow-xl text-center space-y-6
+                    <ul className="flex flex-col gap-4 justify-center text-xl md:block md:text-xl lg:text-3xl text-black font-semibold border-4 bg-[#E2CDF4]/90
+                    border-[#E2CDF4]/80 w-[84%] h-[96%] mt-6 md:mt-0 rounded-lg p-6 md:p-[47px] shadow-xl text-center space-y-6
                     md:space-y-10 mx-auto lg:mx-0 max-w-xs lg:w-70 lg:h-100">
                         <li className="pb-2 md:pb-[13px]">2+ Years of experience</li>
                         <li className="pb-2 md:pb-[13px]">9+ Projects</li>
+                        <li className="pb-2 md:pb-[13px]">6 Months Maintenance</li>
                         <li className="pb-2 md:pb-[13px]">Flexible with timezones</li>
                     </ul>
 
 
                     {/* Points Box */}
-                    <ul className="flex flex-col gap-4 justify-center text-2xl md:block md:text-xl lg:text-3xl text-black font-semibold border-4 bg-[#fef6ce]/90
-                    border-[#fef6ce]/80 w-70 h-92 mt-6 md:mt-0 rounded-lg p-6 md:p-[47px] shadow-xl text-center space-y-6
+                    <ul className="flex flex-col gap-4 justify-center text-xl md:block md:text-xl lg:text-3xl text-black font-semibold border-4 bg-[#fef6ce]/90
+                    border-[#fef6ce]/80 w-[84%] h-[96%] mt-6 md:mt-0 rounded-lg p-6 md:p-[47px] shadow-xl text-center space-y-6
                     md:space-y-10 mx-auto lg:mx-0 max-w-xs lg:w-70 lg:h-100">
-                        <li className="pb-2 md:pb-[13px]">2+ Years of experience</li>
                         <li className="pb-2 md:pb-[13px]">9+ Projects</li>
-                        <li className="pb-2 md:pb-[13px]">Flexible with timezones</li>
+                        <li className="pb-2 md:pb-[13px]">2+ Years of experience</li>
+                        <li className="pb-2 md:pb-[13px]">Eager to Learn</li>
+                        <li className="pb-2 md:pb-[13px]">6 Months Maintenance</li>
                     </ul>
                 </div>
 

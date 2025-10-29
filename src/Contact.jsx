@@ -89,7 +89,7 @@ function Contact() {
 
 
                 {/* Right Side: Social Icons */}
-                <div className="relative flex-1 w-full flex flex-row md:flex-col items-center justify-center gap-10 order-1 lg:order-2">
+                <div className="relative flex-1 w-full flex flex-row md:flex-col items-center justify-evenly gap-10 order-1 lg:order-2">
                     {/* Email Copy */}
                     <div className="relative group">
                         <button
