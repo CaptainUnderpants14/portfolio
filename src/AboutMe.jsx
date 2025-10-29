@@ -35,7 +35,7 @@ function AboutMe() {
                     className="absolute -top-14 left-16 w-24 md:w-28 lg:w-40 h-auto hover:cursor-pointer hover:scale-110 transition-transform duration-200 md:-top-16 md:left-40 lg:-top-28 lg:left-80"
                 />
 
-                <div className="relative grid grid-cols-1 mb-24 md:mb-16 md:grid-cols-3 gap-10 md:gap-10 items-start pt-12">
+                <div className="relative grid grid-cols-1 mb-24 md:mb-12 md:grid-cols-3 gap-10 md:gap-10 items-start pt-12">
                     {/* About Me Text */}
                     <div className="flex flex-col justify-start space-y-4 md:space-y-6 text-center lg:text-left col-span-1">
                         <div className="relative flex justify-center lg:justify-start items-center -top-8 md:top-0">
@@ -72,8 +72,6 @@ function AboutMe() {
                         <li>6 Months Maintenance</li>
                         <li>Flexible with timezones</li>
                     </ul>
-
-
 
                     {/* Points Box */}
                     <ul className="flex flex-col items-center justify-center text-xl gap-4 md:text-xl lg:text-3xl

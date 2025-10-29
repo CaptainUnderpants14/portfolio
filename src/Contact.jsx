@@ -91,7 +91,7 @@ function Contact() {
                 {/* Right Side: Social Icons */}
                 <div className="relative flex-1 w-full flex flex-row md:flex-col items-center justify-between gap-10 order-1 lg:order-2">
                     {/* Email Copy */}
-                    <div className="relative group md:self-start ">
+                    <div className="relative group md:self-start">
                         <button
                             className="flex flex-col items-center focus:outline-none hover:cursor-pointer"
                             onClick={() => {

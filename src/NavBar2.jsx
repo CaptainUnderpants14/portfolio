@@ -136,7 +136,7 @@ const NavBar2 = () => {
                         </p>
                     </div>
                 </div>
-                <div className="hidden md:block relative -top-72 -right-[72%]">
+                <div className="hidden md:block relative -top-72 left-[74%]">
                     {/* Screen Image */}
                     <img
                         src="/Screen3.svg"
