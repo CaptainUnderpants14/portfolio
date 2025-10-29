@@ -21,8 +21,8 @@ function Skills() {
     return (
         <div className="w-full border-b-2 border-dashed py-16 relative">
             {/* Header */}
-            <div className="relative mb-28 w-[80%] mx-auto md:w-[70%]">
-                <div className="absolute left-0 top-0">
+            <div className="relative mb-28 w-[80%] md:w-full">
+                <div className="absolute left-10 top-0 md:left-12">
                     <img
                         src="/aboutme.svg"
                         alt="Decorative Banner"
@@ -33,29 +33,29 @@ function Skills() {
             </div>
 
             {/* Skills Section Container */}
-            <div className="w-[85%] mx-auto pt-7 md:w-[75%]">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-16 text-xl justify-items-center">
+            <div className="w-[85%] mx-auto pt-7 md:w-[90%]">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xl justify-items-center">
                     {/* Frontend */}
-                    <div className="bg-white/10 backdrop-blur-sm rounded-xl shadow-xl border border-gray-300 w-[90%] md:w-[74%] h-[480px] flex flex-col justify-center text-center p-6">
-                        <h3 className="font-pixelm text-4xl mb-6">Frontend</h3>
-                        <ul className="flex flex-col gap-8 justify-left text-2xl">
-                            <li className="flex items-center gap-3 lg: mx-8">
+                    <div className="bg-white/10 backdrop-blur-sm rounded-xl shadow-xl border border-gray-300 w-[90%] h-[100%] md:w-[90%] md:h-full flex flex-col justify-center text-center p-12 md:p-12">
+                        <h3 className="font-pixelm text-3xl mb-6 md:text-3xl">Frontend</h3>
+                        <ul className="flex flex-col gap-8 justify-left text-xl md:text-xl">
+                            <li className="flex items-center gap-3 md:-mx-4 mx-4">
                                 <img className="w-7 h-auto" src="/HTMLlogo.svg" alt="HTML" />
                                 Html
                             </li>
-                            <li className="flex items-center gap-3 lg: mx-8">
+                            <li className="flex items-center gap-3 md:-mx-4 mx-4">
                                 <img className="w-8 h-6" src="/tailwindcsslogo.png" alt="TailwindCSS" />
                                 TailwindCSS
                             </li>
-                            <li className="flex items-center gap-3 lg: mx-8">
+                            <li className="flex items-center gap-3 md:-mx-4 mx-4">
                                 <img className="w-7 h-auto" src="/TsLogo.svg" alt="TypeScript" />
                                 TypeScript
                             </li>
-                            <li className="flex items-center gap-3 font-semibold lg: mx-8">
+                            <li className="flex items-center gap-3 font-semibold md:-mx-4 mx-4">
                                 <img className="w-7 h-auto" src="/ReactLogo.svg" alt="React" />
                                 React
                             </li>
-                            <li className="flex items-center gap-3 lg: mx-8">
+                            <li className="flex items-center gap-3 md:-mx-4 mx-4">
                                 <img className="w-7 h-auto" src="/JavaScript logo.svg" alt="JavaScript" />
                                 JavaScript
                             </li>
@@ -63,26 +63,26 @@ function Skills() {
                     </div>
 
                     {/* Backend */}
-                    <div className="bg-white/10 backdrop-blur-sm rounded-xl shadow-xl border border-gray-300 w-[90%] md:w-[74%] h-[480px] flex flex-col justify-center text-center p-6">
-                        <h3 className="font-pixelm text-4xl mb-6">Backend</h3>
-                        <ul className="flex flex-col gap-8 justify-left text-2xl">
-                            <li className="flex items-center gap-3 lg: mx-8">
+                    <div className="bg-white/10 backdrop-blur-sm rounded-xl shadow-xl border border-gray-300 w-[90%] md:w-[90%] md:h-full flex flex-col justify-center text-center p-12 md:p-12">
+                        <h3 className="font-pixelm text-3xl mb-6 md:text-3xl">Backend</h3>
+                        <ul className="flex flex-col gap-8 justify-left text-xl md:text-xl">
+                            <li className="flex items-center gap-3 md:-mx-4 mx-4">
                                 <img className="w-7 h-auto" src="/Javalogo.svg" alt="Java" />
                                 Java
                             </li>
-                            <li className="flex items-center gap-3 font-semibold lg: mx-8">
+                            <li className="flex items-center gap-3 font-semibold md:-mx-4 mx-4">
                                 <img className="w-7 h-auto" src="/spring-boot-1.svg" alt="Spring Boot" />
                                 SpringBoot
                             </li>
-                            <li className="flex items-center gap-3 lg: mx-8">
+                            <li className="flex items-center gap-3 md:-mx-4 mx-4">
                                 <img className="w-7 h-auto" src="/sqllogo.svg" alt="MySQL" />
                                 MySQL
                             </li>
-                            <li className="flex items-center gap-3 lg: mx-8">
+                            <li className="flex items-center gap-3 md:-mx-4 mx-4">
                                 <img className="w-7 h-auto" src="/postgreslogo.svg" alt="PostgreSQL" />
                                 PostgreSQL
                             </li>
-                            <li className="flex items-center gap-3 lg: mx-8">
+                            <li className="flex items-center gap-3 md:-mx-4 mx-4">
                                 <img className="w-7 h-auto" src="/mongologo.svg" alt="MongoDB" />
                                 MongoDB
                             </li>
@@ -90,18 +90,18 @@ function Skills() {
                     </div>
 
                     {/* DevOps */}
-                    <div className="bg-white/10 backdrop-blur-sm rounded-xl shadow-xl border border-gray-300 w-[90%] md:w-[68%] h-[360px] flex flex-col justify-center text-center p-6">
-                        <h3 className="font-pixelm text-4xl mb-6">DevOps</h3>
-                        <ul className="flex flex-col gap-8 justify-left text-2xl">
-                            <li className="flex items-center gap-3 font-semibold lg: mx-8">
+                    <div className="bg-white/10 backdrop-blur-sm rounded-xl shadow-xl border border-gray-300 w-[90%] md:w-[90%] h-[360px] md:h-[320px] flex flex-col justify-center text-center p-12 md:p-12">
+                        <h3 className="font-pixelm text-3xl mb-6 md:text-3xl">DevOps</h3>
+                        <ul className="flex flex-col gap-8 justify-left  text-xl md:text-xl">
+                            <li className="flex items-center gap-3 font-semibold md:-mx-4 mx-4">
                                 <img className="w-7 h-auto" src="/DockerLogo.svg" alt="Docker" />
                                 Docker
                             </li>
-                            <li className="flex items-center gap-3 lg: mx-8">
+                            <li className="flex items-center gap-3 md:-mx-4 mx-4">
                                 <img className="w-7 h-auto" src="/gitLogo.svg" alt="Git" />
                                 Git
                             </li>
-                            <li className="flex items-center gap-3 font-semibold lg: mx-8">
+                            <li className="flex items-center gap-3 font-semibold md:-mx-4 mx-4">
                                 <img className="w-9 h-auto" src="/Amazon_Web_Services_Logo.png" alt="AWS" />
                                 AWS
                             </li>

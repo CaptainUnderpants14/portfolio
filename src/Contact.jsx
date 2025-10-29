@@ -128,14 +128,6 @@ function Contact() {
                                 }
                             }}
                         >
-                            <a className="md:hidden"
-                                href="mailto:parassharma8890@gmail.com">
-                                <img
-                                    src="/Mail.svg"
-                                    alt="Mail logo"
-                                    className="w-12 md:w-16 lg:w-20 h-auto transition-transform duration-200 group-hover:scale-110"
-                                />
-                            </a>
                             <img
                                 src="/Mail.svg"
                                 alt="Mail logo"
@@ -148,6 +140,14 @@ function Contact() {
                                 Copy Email
                             </p>
                         </button>
+                        <a className="md:hidden"
+                           href="mailto:parassharma8890@gmail.com?subject=Hey, I wanted to ask about ...">
+                            <img
+                                src="/Mail.svg"
+                                alt="Mail logo"
+                                className="w-12 md:w-16 lg:w-20 h-auto transition-transform duration-200 group-hover:scale-110"
+                            />
+                        </a>
                     </div>
 
                     {/* LinkedIn */}
@@ -165,7 +165,7 @@ function Contact() {
 
                     {/*GitHub*/}
                     <a
-                        href="https://www.instagram.com/parassharma1466/"
+                        href="https://github.com/CaptainUnderpants14"
                         target="_blank"
                         className="group"
                     >
