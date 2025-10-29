@@ -34,7 +34,7 @@ function Skills() {
 
             {/* Skills Section Container */}
             <div className="w-[85%] mx-auto pt-7 md:w-[90%]">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xl justify-items-center">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-4 text-xl justify-items-center">
                     {/* Frontend */}
                     <div className="bg-white/10 backdrop-blur-sm rounded-xl shadow-xl border border-gray-300 w-[90%] h-[100%] md:w-[90%] md:h-full flex flex-col justify-center text-center p-12 md:p-12">
                         <h3 className="font-pixelm text-3xl mb-6 md:text-3xl">Frontend</h3>
