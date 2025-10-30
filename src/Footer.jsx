@@ -8,11 +8,11 @@ function Footer() {
     };
 
     return (
-        <div className="w-full h-20 flex justify-evenly items-center mb-10">
+        <div className="w-full h-20 flex justify-evenly items-center mb-10 lg:mb-5">
             <div className=" absolute w-full flex items-center justify-center">
                 <img src="/Heart.svg"
                      alt="Heart icon"
-                     className="relative w-10 -top-10 hover:cursor-pointer hover:scale-110 transition-transform duration-200 lg:-top-8"
+                     className="relative w-10 lg:w-[4%] -top-10 hover:cursor-pointer hover:scale-110 transition-transform duration-200 lg:-top-8"
                      onClick={playBubbleSound}
                 />
             </div>

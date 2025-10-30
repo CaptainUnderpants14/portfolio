@@ -21,28 +21,26 @@ function Contact() {
     return (
         <div
             id="contact"
-            className="min-h-screen relative border-b-2 border-dashed border-black pb-12 md:pb-18 md:px-12 lg:pb-18 pt-16 md:pt-18 lg:pt-18"
-        >
+            className="relative border-b-2 border-dashed border-black pb-12 md:pb-18 md:px-12 lg:pb-18 pt-16 md:pt-18 lg:pt-18">
+
             <div className="w-full text-center text-5xl md:text-5xl font-pixelb text-nowrap pb-6">
                 Let's Talk!
             </div>
 
-            <div className="text-xl w-[90%] mx-auto flex flex-col items-center md:w-full md:items-start md:text-2xl font-semibold mt-4 md:px-8 md:mt-6 lg:mt-8" >
+            <div className="text-xl w-[90%] lg:w-[80%] mx-auto flex flex-col items-center md:w-full md:items-start md:text-2xl font-semibold mt-4 md:px-8 md:mt-6 lg:mt-8" >
                 <p className="mb-2">Got an idea, opportunity or a challenge?</p>
                 <p>
                     Don't worry, I have the skills to{" "}
-                    <span className="text-center md:text-left block font-pixelm pt-2 pb-12">make it happen!</span>
+                    <span className="text-center md:text-left block lg:inline-block font-pixelm pt-2 pb-12">make it happen!</span>
                 </p>
             </div>
 
-
-
-            <div className="w-[80%] md:w-full mx-auto flex flex-col-reverse md:flex-row-reverse lg:flex-row gap-8 md:gap-44 lg:gap-18 lg:items-center px-4 md:px-8 lg:px-0">
-                {/* Left Side: Form */}
+            <div className="w-[80%] md:w-full lg:w-[76%] mx-auto flex flex-col-reverse md:flex-row-reverse lg:flex-row gap-8 md:gap-44 lg:gap-18 lg:items-center px-4 md:px-8 lg:px-0">
+                {/* Form */}
                 <div className="flex-1 order-2 lg:order-1">
                     <form
                         onSubmit={onSubmit}
-                        className="md:mt-9 flex flex-col gap-6 md:gap-6 text-m md:text-xl w-full md:w-92 lg:w-108"
+                        className="md:mt-9 flex flex-col gap-6 md:gap-6 text-m md:text-xl w-full md:w-92 lg:w-[120%]"
                     >
                         <label className="flex flex-col gap-1 md:gap-2">
                             <span className="font-semibold">Your Name</span>
@@ -87,10 +85,9 @@ function Contact() {
                     </p>
                 </div>
 
-
-                {/* Right Side: Social Icons */}
-                <div className="relative flex-1 w-full flex flex-row md:flex-col md:-mt-16 items-center justify-between gap-4 order-1 lg:order-2">
-                    {/* Email Copy */}
+                {/* Social icons */}
+                <div className="relative flex-1 w-full flex flex-row md:flex-col md:-mt-16 items-center justify-between gap-4 order-1 lg:order-2 lg:ml-[20%]">
+                    {/* Email */}
                     <div className="relative group md:self-start">
                         <button
                             className="flex flex-col items-center focus:outline-none hover:cursor-pointer"
@@ -130,7 +127,7 @@ function Contact() {
                             <img
                                 src="/Mail.svg"
                                 alt="Mail logo"
-                                className="hidden md:block w-12 md:w-22 lg:w-20 h-auto transition-transform duration-200 group-hover:scale-110"
+                                className="hidden md:block w-12 md:w-16 lg:w-20 h-auto transition-transform duration-200 group-hover:scale-110"
                             />
                             <p
                                 id="email"
@@ -142,12 +139,11 @@ function Contact() {
                             <img
                                 src="/Mail.svg"
                                 alt="Mail logo"
-                                className="w-12 md:w-22 lg:w-20 h-auto transition-transform duration-200 group-hover:scale-110"
+                                className="w-12 md:w-16 lg:w-20 h-auto transition-transform duration-200 group-hover:scale-110"
                             />
                         </a>
                     </div>
 
-                    {/* LinkedIn */}
                     <a
                         href="https://www.linkedin.com/in/paras-sharma-514a8426a/"
                         target="_blank"
@@ -155,11 +151,10 @@ function Contact() {
                         <img
                             src="/linkedinlogo.svg"
                             alt="LinkedIn"
-                            className="w-12 md:w-22 lg:w-24 h-auto transition-transform duration-200 group-hover:scale-110"
+                            className="w-12 md:w-16 lg:w-24 h-auto transition-transform duration-200 group-hover:scale-110"
                         />
                     </a>
 
-                    {/* GitHub */}
                     <a
                         href="https://github.com/CaptainUnderpants14"
                         target="_blank"
@@ -167,11 +162,10 @@ function Contact() {
                         <img
                             src="/Github%20icon.png"
                             alt="Github Logo"
-                            className="w-10 md:w-22 lg:w-20 h-auto transition-transform duration-200 group-hover:scale-110"
+                            className="w-10 md:w-16 lg:w-20 h-auto transition-transform duration-200 group-hover:scale-110"
                         />
                     </a>
 
-                    {/* Instagram */}
                     <a
                         href="https://www.instagram.com/parassharma1466/"
                         target="_blank"
@@ -179,7 +173,7 @@ function Contact() {
                         <img
                             src="/instagramLogo.svg"
                             alt="Instagram Logo"
-                            className="w-10 md:w-22 lg:w-20 h-auto transition-transform duration-200 group-hover:scale-110"
+                            className="w-10 md:w-16 lg:w-20 h-auto transition-transform duration-200 group-hover:scale-110"
                         />
                     </a>
                 </div>

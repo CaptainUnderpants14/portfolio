@@ -40,7 +40,6 @@ const NavBar2 = () => {
                         />
                     </div>
 
-                    {/* Desktop Menu */}
                     <ul className="hidden md:flex gap-6 lg:gap-10 text-xl lg:text-2xl font-medium items-center">
                         <li
                             className="font-bold text-black cursor-pointer hover:scale-110 transition-transform duration-200 whitespace-nowrap"
@@ -127,31 +126,31 @@ const NavBar2 = () => {
             )}
 
             <div className="w-full bg-[#E2CDF4] border-b-2 border-dashed border-black">
-                <div className="w-[80%] h-90 mx-auto flex flex-col md:flex-row items-start justify-evenly gap-8 md:h-100 lg:gap-0">
-                    <div className="flex flex-col justify-center items-start w-full mx-auto pt-14 md:pt-40">
-                        <p className="font-pixel text-5xl md:text-6xl lg:text-8xl typewriter">Hello,</p>
-                        <p className="text-4xl md:text-5xl lg:text-[55px] font-bold tracking-wider mt-2">I'm Paras Sharma,</p>
-                        <p className="text-2xl md:text-3xl lg:text-3xl font-bold tracking-wider text-gray-700 mt-1">
-                            A Full Stack Web Developer.
-                        </p>
+                    <div className="w-[80%] h-90 mx-auto flex flex-col md:flex-row items-start justify-evenly gap-8 md:h-100 lg:h-124 ">
+                        <div className="flex flex-col justify-center items-start w-full mx-auto pt-14 lg:relative lg:left-8 md:pt-40 lg:pt-48 lg:ml-[4%]">
+                            <p className="font-pixel text-5xl md:text-6xl lg:text-8xl typewriter">Hello,</p>
+                            <p className="text-4xl md:text-5xl lg:text-[55px] font-bold tracking-wider mt-2">I'm Paras Sharma,</p>
+                            <p className="text-2xl md:text-3xl lg:text-3xl font-bold tracking-wider text-gray-700 mt-1">
+                                A Full Stack Web Developer.
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div className="hidden md:block relative -top-72 ml-[74%]">
-                    {/* Screen Image */}
-                    <img
-                        src="/Screen3.svg"
-                        alt="Screen"
-                        className="hidden md:block absolute md:w-40 lg:w-48 h-auto hover:scale-105 transition-transform duration-200"
-                    />
+                    <div className="hidden md:block relative -top-72 ml-[76%] lg:-top-96 lg:ml-[72%]">
+                        {/* Screen */}
+                        <img
+                            src="/Screen3.svg"
+                            alt="Screen"
+                            className="hidden md:block absolute md:w-40 lg:w-56 h-auto hover:scale-105 transition-transform duration-200"
+                        />
 
-                    {/* Keyboard Image */}
-                    <img
-                        src="/Keyboard6.svg"
-                        alt="Keyboard"
-                        onClick={playKeyboardClickSound}
-                        className="hidden md:block absolute top-30 left-6 w-32 md:w-26 lg:w-44 h-auto hover:scale-105 rotate-2 transition-transform duration-200 cursor-pointer"
-                    />
-                </div>
+                        {/* Keyboard */}
+                        <img
+                            src="/Keyboard6.svg"
+                            alt="Keyboard"
+                            onClick={playKeyboardClickSound}
+                            className="hidden md:block absolute top-30 left-6 w-32 md:w-26 lg:top-40 lg:w-40 h-auto hover:scale-105 rotate-2 transition-transform duration-200 cursor-pointer"
+                        />
+                    </div>
             </div>
         </>
     );
