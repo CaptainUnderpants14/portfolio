@@ -1,3 +1,5 @@
+@import 'tailwindcss';
+
 @font-face {
     font-family: Pixel;
     src: url('../src/assets/fonts/PixelifySans-SemiBold.ttf');
@@ -15,8 +17,6 @@
     src: url('../src/assets/fonts/PixelifySans-Medium.ttf');
     font-weight: 500;
 }
-
-@import 'tailwindcss';
 
 @theme{
     --font-pixel : Pixel, "sans-serif";
@@ -59,6 +59,7 @@
     border-right: 4px solid #000;
     animation: typing 4s steps(6, end) infinite, blink 0.7s step-end infinite;
 }
+
 
 
 

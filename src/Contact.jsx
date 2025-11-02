@@ -13,6 +13,7 @@ function Contact() {
 
         if (data.success) {
             const sendButtonText = document.getElementById("sendButton");
+            document.getElementById("contactForm").reset();
             sendButtonText.innerText = "Sent!";
         }
     };
@@ -23,7 +24,7 @@ function Contact() {
             id="contact"
             className="relative border-b-2 border-dashed border-black pb-12 md:pb-18 md:px-12 lg:pb-18 pt-16 md:pt-18 lg:pt-18">
 
-            <div className="w-full text-center text-5xl md:text-5xl font-pixelb text-nowrap pb-6">
+            <div className="w-full text-center text-5xl md:text-5xl font-pixelb text-nowrap pb-6 ">
                 Let's Talk!
             </div>
 
@@ -39,6 +40,7 @@ function Contact() {
                 {/* Form */}
                 <div className="flex-1 order-2 lg:order-1">
                     <form
+                        id="contactForm"
                         onSubmit={onSubmit}
                         className="md:mt-9 flex flex-col gap-6 md:gap-6 text-m md:text-xl w-full md:w-92 lg:w-[120%]"
                     >
@@ -75,7 +77,7 @@ function Contact() {
                         <button
                             id="sendButton"
                             type="submit"
-                            className="w-24 md:w-32 lg:w-24 py-2  mt-1 font-pixelm text-lg md:text-2xl shadow-[0_0_10px_#89F336] h-12 md:h-12 lg:h-14 rounded-full bg-[#89F336] hover:scale-110 transition-transform duration-200"
+                            className="w-24 md:w-32 lg:w-24 py-2  mt-1 font-pixelm text-lg md:text-2xl h-12 md:h-12 lg:h-14 rounded-full bg-[#89F336] hover:scale-110 transition-transform duration-200"
                         >
                             Send
                         </button>
@@ -127,7 +129,7 @@ function Contact() {
                             <img
                                 src="/Mail.svg"
                                 alt="Mail logo"
-                                className="hidden md:block w-12 md:w-16 lg:w-20 h-auto transition-transform duration-200 group-hover:scale-110"
+                                className="hidden md:block w-12 md:w-16 lg:w-20 h-auto transition-transform duration-200 group-hover:scale-110 md:-rotate-3"
                             />
                             <p
                                 id="email"
@@ -151,7 +153,7 @@ function Contact() {
                         <img
                             src="/linkedinlogo.svg"
                             alt="LinkedIn"
-                            className="w-12 md:w-16 lg:w-24 h-auto transition-transform duration-200 group-hover:scale-110"
+                            className="w-12 md:w-16 lg:w-24 h-auto transition-transform duration-200 group-hover:scale-110 md:rotate-3"
                         />
                     </a>
 
@@ -162,7 +164,7 @@ function Contact() {
                         <img
                             src="/Github%20icon.png"
                             alt="Github Logo"
-                            className="w-10 md:w-16 lg:w-20 h-auto transition-transform duration-200 group-hover:scale-110"
+                            className="w-10 md:w-16 lg:w-20 h-auto transition-transform duration-200 group-hover:scale-110 md:-rotate-5"
                         />
                     </a>
 
@@ -173,7 +175,7 @@ function Contact() {
                         <img
                             src="/instagramLogo.svg"
                             alt="Instagram Logo"
-                            className="w-10 md:w-16 lg:w-20 h-auto transition-transform duration-200 group-hover:scale-110"
+                            className="w-10 md:w-16 lg:w-20 h-auto transition-transform duration-200 group-hover:scale-110 md:rotate-3"
                         />
                     </a>
                 </div>

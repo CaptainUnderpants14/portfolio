@@ -1,6 +1,8 @@
 import { useState } from 'react';
+import { IoSunnyOutline } from "react-icons/io5";
+import { IoIosMoon } from "react-icons/io";
 
-const NavBar2 = () => {
+const NavBar = () => {
 
     const playKeyboardClickSound = () => {
         const audio = new Audio("/sounds/spacebarClick.mp3");
@@ -24,43 +26,51 @@ const NavBar2 = () => {
         if (element) {
             element.scrollIntoView({ behavior: 'smooth' });
         }
-        closeMobileMenu(); // Close menu on link click
+        closeMobileMenu();
     };
 
     return (
-        <>
+        <div>
             <nav className="font-pixelm fixed top-0 left-0 w-full border-b-2 border-dashed border-black bg-white z-50 h-16 md:h-20">
                 <div className="w-[80%] max-w-7xl mx-auto flex justify-between items-center px-4 sm:px-8 h-full relative">
                     <div className="flex items-center flex-shrink-0">
                         <img
-                            src="/BackButtons.svg"
+                            src="/navButtons.svg"
                             alt="Logo"
                             className="w-14 md:w-16 lg:w-[72px] h-auto hover:scale-110 transition-transform duration-200 cursor-pointer"
                             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                         />
                     </div>
 
-                    <ul className="hidden md:flex gap-6 lg:gap-10 text-xl lg:text-2xl font-medium items-center">
+                    <ul className="hidden md:flex gap-6 lg:gap-10 text-xl font-medium items-center">
                         <li
-                            className="font-bold text-black cursor-pointer hover:scale-110 transition-transform duration-200 whitespace-nowrap"
+                            className="font-bold cursor-pointer hover:scale-110 transition-transform duration-200 whitespace-nowrap"
                             onClick={() => scrollToSection("about")}>
                             About
                         </li>
                         <li
-                            className="font-bold text-black cursor-pointer hover:scale-110 transition-transform duration-200 whitespace-nowrap"
-                            onClick={() => scrollToSection("skills")}>
-                            Skills
-                        </li>
-                        <li
-                            className="font-bold text-black cursor-pointer hover:scale-110 transition-transform duration-200 whitespace-nowrap"
-                            onClick={() => scrollToSection("projects")}>
+                            className="font-bold cursor-pointer hover:scale-110 transition-transform duration-200 whitespace-nowrap"
+                            onClick={() => scrollToSection("")}>
                             Projects
                         </li>
                         <li
-                            className="font-bold text-black cursor-pointer hover:scale-110 transition-transform duration-200 whitespace-nowrap"
+                            className="font-bold cursor-pointer hover:scale-110 transition-transform duration-200 whitespace-nowrap"
+                            onClick={() => scrollToSection("")}>
+                            Skills
+                        </li>
+                        <li
+                            className="font-bold  cursor-pointer hover:scale-110 transition-transform duration-200 whitespace-nowrap"
                             onClick={() => scrollToSection("contact")}>
                             Contact
                         </li>
+                        {/*<li >*/}
+                        {/*    <button className="font-bold hover:cursor-pointer hover:scale-110 transition-transform"*/}
+                        {/*        onClick={() =>{*/}
+                        {/*        setTheme("");}}>*/}
+                        {/*        <IoSunnyOutline />*/}
+                        {/*        /!*<IoIosMoon />*!/*/}
+                        {/*    </button>*/}
+                        {/*</li>*/}
                     </ul>
 
                     {/* Mobile Menu Button */}
@@ -84,7 +94,7 @@ const NavBar2 = () => {
 
                 {/* Mobile Menu Dropdown */}
                 {isMobileMenuOpen && (
-                    <div className="md:hidden absolute top-full left-0 w-full bg-white border-t-2 border-dashed border-black shadow-lg z-40">
+                    <div className="md:hidden absolute top-full left-0 w-full bg-white border-t-2 border-dashed border-black shadow-lg z-40 ">
                         <div className="w-[80%] max-w-7xl mx-auto px-4 sm:px-8 py-4">
                             <ul className="flex flex-col gap-4 text-lg font-medium items-start">
                                 <li
@@ -120,14 +130,15 @@ const NavBar2 = () => {
             {/* Backdrop for mobile menu (optional, for better UX on small screens) */}
             {isMobileMenuOpen && (
                 <div
-                    className="md:hidden fixed inset-0 bg-black bg-opacity-50 z-30"
+                    className="md:hidden fixed inset-0 bg-white/30 backdrop-blur-sm z-30"
                     onClick={closeMobileMenu}
                 />
+
             )}
 
-            <div className="w-full bg-[#E2CDF4] border-b-2 border-dashed border-black">
+            <div className="w-full bg-[#e2cdf4] border-b-2 border-dashed border-black ">
                     <div className="w-[80%] h-90 mx-auto flex flex-col md:flex-row items-start justify-evenly gap-8 md:h-100 lg:h-124 ">
-                        <div className="flex flex-col justify-center items-start w-full mx-auto pt-14 lg:relative lg:left-8 md:pt-40 lg:pt-48 lg:ml-[4%]">
+                        <div className="flex flex-col justify-center items-start w-full mx-auto pt-14 lg:relative lg:left-8 md:pt-40 lg:pt-48 lg:ml-[4%] ">
                             <p className="font-pixel text-5xl md:text-6xl lg:text-8xl typewriter">Hello,</p>
                             <p className="text-4xl md:text-5xl lg:text-[55px] font-bold tracking-wider mt-2">I'm Paras Sharma,</p>
                             <p className="text-2xl md:text-3xl lg:text-3xl font-bold tracking-wider text-gray-700 mt-1">
@@ -152,8 +163,8 @@ const NavBar2 = () => {
                         />
                     </div>
             </div>
-        </>
+        </div>
     );
 };
 
-export default NavBar2;
+export default NavBar;

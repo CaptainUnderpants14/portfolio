@@ -24,15 +24,14 @@ function AboutMe() {
     return (
         <div
             id="about"
-            className="bg-white pt-10 px-5 md:px-20 border-b-2 border-dashed border-black flex justify-center lg:mt-6 relative"
-        >
-            <div className="w-[90%] md:w-full mx-auto lg:w-[90%]">
+            className="pt-16 px-5 md:px-20 border-b-2 border-dashed border-black flex justify-center relative">
+            <div className="w-[90%] md:w-full mx-auto lg:w-[90%] ">
                 {/* Controller */}
                 <img
                     src="/controller.svg"
                     alt="Controller Icon"
                     onClick={playControllerSound}
-                    className="absolute -top-14 left-16 w-24 md:w-28 lg:w-36 h-auto hover:cursor-pointer hover:scale-110 transition-transform duration-200 md:-top-16 md:left-40 lg:-top-28 lg:left-80"
+                    className="absolute -top-14 left-16 w-24 md:w-28 lg:w-36 h-auto hover:cursor-pointer hover:scale-110 transition-transform duration-200 md:-top-16 md:left-40 lg:-top-22 lg:left-80"
                 />
 
                 <div className="relative grid grid-cols-1 mb-24 md:mb-12 md:grid-cols-3 gap-10 md:gap-10 items-start pt-12 lg:pt-6 lg:mb-16 lg:ml-[6%]">
@@ -64,9 +63,10 @@ function AboutMe() {
                     {/* Experience */}
                     <ul
                         className="flex flex-col items-center justify-center text-xl gap-4 md:text-xl lg:text-[1.6vw]
-                             text-black font-semibold border-4 bg-[#E2CDF4]/90 border-[#E2CDF4]/80
+                             text-black font-semibold border-4 bg-[#e2cdf4] border-[#e2cdf4]
                              w-[84%] h-full md:w-full md:h-[92%] mt-6 md:mt-0 rounded-lg p-10 md:p-[47px]
-                             shadow-xl text-center space-y-6 md:space-y-10 mx-auto lg:mx-0 max-w-xs lg:w-[80%] lg:h-[96%]">
+                             shadow-xl text-center space-y-6 md:space-y-10 mx-auto lg:mx-0 max-w-xs lg:w-[80%] lg:h-[96%]
+                             lg:hover:scale-105 transition-transform duration-200 cursor-pointer">
                         <li>2+ Years of experience</li>
                         <li>9+ Projects</li>
                         <li>6 Months Maintenance</li>
@@ -77,7 +77,8 @@ function AboutMe() {
                     <ul className="flex flex-col items-center justify-center text-xl gap-4 md:text-xl lg:text-[1.6vw]
                              text-black font-semibold border-4 bg-[#fef6ce]/90 border-[#fef6ce]/80
                              w-[84%] h-full md:w-full md:h-[92%] mt-6 md:mt-0 rounded-lg p-10 md:p-[47px]
-                             shadow-xl text-center space-y-6 md:space-y-10 mx-auto lg:mx-0 max-w-xs lg:w-[80%] lg:h-[96%]">
+                             shadow-xl text-center space-y-6 md:space-y-10 mx-auto lg:mx-0 max-w-xs lg:w-[80%] lg:h-[96%]
+                             lg:hover:scale-105 transition-transform duration-200 cursor-pointer">
                         <li>9+ Projects</li>
                         <li>2+ Years of experience</li>
                         <li>Eager to Learn</li>
@@ -87,10 +88,10 @@ function AboutMe() {
 
                 {/* Pacman */}
                 <img
-                    src="/pacman.svg"
+                    src="/pacman%20logo.svg"
                     alt="Pacman Icon"
                     onClick={playPacmanSound}
-                    className="absolute right-12 -bottom-28 w-48 md:w-44 lg:w-56 h-auto hover:cursor-pointer hover:scale-110 transition-transform duration-200 lg:-bottom-34 lg:right-24"
+                    className="absolute right-12 z-50 -bottom-28 w-48 md:w-44 lg:w-56 h-auto hover:cursor-pointer hover:scale-110 transition-transform duration-200 lg:-bottom-34 lg:right-24"
                 />
             </div>
         </div>
