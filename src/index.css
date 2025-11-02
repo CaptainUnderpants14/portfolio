@@ -1,4 +1,9 @@
 @import 'tailwindcss';
+@custom-variant dark (&:where(.dark, .dark *));
+
+*{
+    /*@apply transition-colors duration-400;*/
+}
 
 @font-face {
     font-family: Pixel;
@@ -56,7 +61,7 @@
     display: inline-block;
     white-space: nowrap;
     overflow: hidden;
-    border-right: 4px solid #000;
+    /*border-right: 4px solid #000;*/
     animation: typing 4s steps(6, end) infinite, blink 0.7s step-end infinite;
 }
 

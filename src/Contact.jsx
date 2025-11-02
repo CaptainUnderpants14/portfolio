@@ -22,13 +22,13 @@ function Contact() {
     return (
         <div
             id="contact"
-            className="relative border-b-2 border-dashed border-black pb-12 md:pb-18 md:px-12 lg:pb-18 pt-16 md:pt-18 lg:pt-18">
+            className="relative border-b-2 border-dashed border-black pb-12 md:pb-18 md:px-12 lg:pb-18 pt-16 md:pt-18 lg:pt-18 dark dark:bg-gradient-to-b dark:from-zinc-600 dark:via-black dark:to-zinc-700 dark:border-white">
 
-            <div className="w-full text-center text-5xl md:text-5xl font-pixelb text-nowrap pb-6 ">
+            <div className="w-full text-center text-5xl md:text-5xl font-pixelb text-nowrap pb-6 dark:text-gray-200">
                 Let's Talk!
             </div>
 
-            <div className="text-xl w-[90%] lg:w-[80%] mx-auto flex flex-col items-center md:w-full md:items-start md:text-2xl font-semibold mt-4 md:px-8 md:mt-6 lg:mt-8" >
+            <div className="text-xl w-[90%] lg:w-[80%] mx-auto flex flex-col items-center md:w-full md:items-start md:text-2xl font-semibold mt-4 md:px-8 md:mt-6 lg:mt-8 dark:text-gray-200">
                 <p className="mb-2">Got an idea, opportunity or a challenge?</p>
                 <p>
                     Don't worry, I have the skills to{" "}
@@ -36,21 +36,20 @@ function Contact() {
                 </p>
             </div>
 
-            <div className="w-[80%] md:w-full lg:w-[76%] mx-auto flex flex-col-reverse md:flex-row-reverse lg:flex-row gap-8 md:gap-44 lg:gap-18 lg:items-center px-4 md:px-8 lg:px-0">
+            <div className="w-[80%] md:w-full lg:w-[76%] mx-auto flex flex-col-reverse md:flex-row-reverse lg:flex-row gap-8 md:gap-44 lg:gap-18 lg:items-center px-4 md:px-8 lg:px-0 dark:text-gray-200">
                 {/* Form */}
                 <div className="flex-1 order-2 lg:order-1">
                     <form
                         id="contactForm"
                         onSubmit={onSubmit}
-                        className="md:mt-9 flex flex-col gap-6 md:gap-6 text-m md:text-xl w-full md:w-92 lg:w-[120%]"
-                    >
+                        className="md:mt-9 flex flex-col gap-6 md:gap-6 text-m md:text-xl w-full md:w-92 lg:w-[120%]">
                         <label className="flex flex-col gap-1 md:gap-2">
                             <span className="font-semibold">Your Name</span>
                             <input
                                 type="text"
                                 name="name"
                                 required
-                                className="border-2 border-black rounded-lg p-2 md:p-3 bg-white text-black focus:outline-none focus:ring-2 focus:ring-black"
+                                className="border-2 border-black rounded-lg p-2 md:p-3 bg-white text-black focus:outline-none focus:ring-2 focus:ring-black dark:bg-zinc-300"
                             />
                         </label>
 
@@ -60,7 +59,7 @@ function Contact() {
                                 type="email"
                                 name="email"
                                 required
-                                className="border-2 border-black rounded-lg p-2 md:p-3 bg-white text-black focus:outline-none focus:ring-2 focus:ring-black"
+                                className="border-2 border-black rounded-lg p-2 md:p-3 bg-white text-black focus:outline-none focus:ring-2 focus:ring-black dark:bg-zinc-300"
                             />
                         </label>
 
@@ -70,14 +69,17 @@ function Contact() {
                                 name="message"
                                 rows="4 sm:rows-5 md:rows-6"
                                 required
-                                className="border-2 resize-none h-40 border-black rounded-lg p-2 md:p-3 bg-white text-black focus:outline-none focus:ring-2 focus:ring-black"
+                                className="border-2 resize-none h-40 border-black rounded-lg p-2 md:p-3 bg-white text-black focus:outline-none focus:ring-2 focus:ring-black dark:bg-zinc-300"
                             ></textarea>
                         </label>
 
                         <button
                             id="sendButton"
                             type="submit"
-                            className="w-24 md:w-32 lg:w-24 py-2  mt-1 font-pixelm text-lg md:text-2xl h-12 md:h-12 lg:h-14 rounded-full bg-[#89F336] hover:scale-110 transition-transform duration-200"
+                            className="w-24 md:w-32 lg:w-24 py-2  mt-1 font-pixelm text-lg md:text-2xl h-12 md:h-12 lg:h-14
+                            rounded-full bg-[#89F336] hover:scale-110 transition-transform duration-200
+                            dark:bg-zinc-100 dark:text-gray-900 dark:[filter:drop-shadow(0_0_8px_rgba(255,255,255,0.6))]
+                                 dark:group-hover:[filter:drop-shadow(0_0_12px_rgba(255,255,255,0.8))]"
                         >
                             Send
                         </button>
@@ -129,7 +131,9 @@ function Contact() {
                             <img
                                 src="/Mail.svg"
                                 alt="Mail logo"
-                                className="hidden md:block w-12 md:w-16 lg:w-20 h-auto transition-transform duration-200 group-hover:scale-110 md:-rotate-3"
+                                className="hidden md:block w-12 md:w-16 lg:w-20 h-auto transition-transform duration-200 group-hover:scale-110 md:-rotate-3
+                                dark:[filter:brightness(0.90)_drop-shadow(0_0_8px_rgba(255,255,255,0.6))]
+                                 dark:hover:[filter:drop-shadow(0_0_12px_rgba(255,255,255,0.8))]"
                             />
                             <p
                                 id="email"
@@ -141,7 +145,9 @@ function Contact() {
                             <img
                                 src="/Mail.svg"
                                 alt="Mail logo"
-                                className="w-12 md:w-16 lg:w-20 h-auto transition-transform duration-200 group-hover:scale-110"
+                                className="w-12 md:w-16 lg:w-20 h-auto transition-transform duration-200 group-hover:scale-110
+                                dark:[filter:drop-shadow(0_0_8px_rgba(255,255,255,0.6))]
+                                 dark:group-hover:[filter:drop-shadow(0_0_12px_rgba(255,255,255,0.8))]"
                             />
                         </a>
                     </div>
@@ -151,9 +157,11 @@ function Contact() {
                         target="_blank"
                         className="group md:self-end">
                         <img
-                            src="/linkedinlogo.svg"
+                            src="/linkedinlogo2.svg"
                             alt="LinkedIn"
-                            className="w-12 md:w-16 lg:w-24 h-auto transition-transform duration-200 group-hover:scale-110 md:rotate-3"
+                            className="w-12 md:w-16 lg:w-24 h-auto transition-transform duration-200 group-hover:scale-110 md:rotate-3
+                            dark:[filter:brightness(0.90)_drop-shadow(0_0_8px_rgba(255,255,255,0.6))]
+                                 dark:hover:[filter:drop-shadow(0_0_12px_rgba(255,255,255,0.8))]"
                         />
                     </a>
 
@@ -162,9 +170,11 @@ function Contact() {
                         target="_blank"
                         className="group md:self-start">
                         <img
-                            src="/Github%20icon.png"
+                            src="/githubLogo2.svg"
                             alt="Github Logo"
-                            className="w-10 md:w-16 lg:w-20 h-auto transition-transform duration-200 group-hover:scale-110 md:-rotate-5"
+                            className="w-10 md:w-16 lg:w-20 h-auto transition-transform duration-200 group-hover:scale-110 md:-rotate-5
+                                 dark:[filter:brightness(0.90)_drop-shadow(0_0_8px_rgba(255,255,255,0.6))]
+                                 dark:hover:[filter:drop-shadow(0_0_12px_rgba(255,255,255,0.8))]"
                         />
                     </a>
 
@@ -173,9 +183,11 @@ function Contact() {
                         target="_blank"
                         className="group md:self-end">
                         <img
-                            src="/instagramLogo.svg"
+                            src="/instalogo.svg"
                             alt="Instagram Logo"
-                            className="w-10 md:w-16 lg:w-20 h-auto transition-transform duration-200 group-hover:scale-110 md:rotate-3"
+                            className="w-10 md:w-16 lg:w-20 h-auto transition-transform duration-200 group-hover:scale-110 md:rotate-3
+                            dark:[filter:brightness(0.90)_drop-shadow(0_0_8px_rgba(255,255,255,0.6))]
+                                 dark:hover:[filter:brightness(0.95)_drop-shadow(0_0_12px_rgba(255,255,255,0.8))]"
                         />
                     </a>
                 </div>
