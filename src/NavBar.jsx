@@ -38,8 +38,8 @@ const NavBar = ({ dark, toggleDark }) => {
                             src="/navButtons.svg"
                             alt="Logo"
                             className="w-14 md:w-16 lg:w-[72px] h-auto hover:cursor-pointer transition-transform duration-200
-                            dark:[filter:brightness(1)_drop-shadow(0_0_8px_rgba(255,255,255,0.6))]
-                                 dark:hover:[filter:brightness(1.05)_drop-shadow(0_0_8px_rgba(255,255,255,0.8))]"
+                            md:dark:[filter:brightness(1)_drop-shadow(0_0_8px_rgba(255,255,255,0.6))]
+                                 md:dark:hover:[filter:brightness(1.05)_drop-shadow(0_0_8px_rgba(255,255,255,0.8))]"
                             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                         />
                     </div>
@@ -80,14 +80,14 @@ const NavBar = ({ dark, toggleDark }) => {
                     <div className="md:hidden flex items-center gap-4">
                         {/* Theme Toggle Button */}
                         <button
-                            className="p-2 rounded-full text-black dark:text-white transition-transform duration-200 hover:scale-110"
+                            className="rounded-full text-black dark:text-white"
                             onClick={toggleDark}
                             aria-label="Toggle theme"
                         >
                             {dark ? (
-                                <IoSunnyOutline size={24} />   // show sun in dark mode
+                                <img src ="/lightTheme.png"  className="w-6 h-auto [filter:drop-shadow(0_0_6px_rgba(255,255,255,0.9))]"/>   // show sun in dark mode
                             ) : (
-                                <IoIosMoon size={24} />        // show moon in light mode
+                                <img src = "/darkTheme.png" className="w-7 h-auto [filter:drop-shadow(2px_2px_6px_rgba(0,0,0,0.8))]"/>        // show moon in light mode
                             )}
                         </button>
 
