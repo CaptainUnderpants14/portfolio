@@ -22,7 +22,7 @@ function Contact() {
     return (
         <div
             id="contact"
-            className="relative border-b-2 border-dashed border-black pb-12 md:pb-18 md:px-12 lg:pb-18 pt-16 md:pt-18 lg:pt-18 dark dark:bg-gradient-to-b dark:from-zinc-600 dark:via-black dark:to-zinc-700 dark:border-white">
+            className="relative border-b-2 border-dashed border-black pb-12 md:pb-18 md:px-12 lg:pb-18 pt-16 md:pt-18 lg:pt-18 dark:bg-gradient-to-b dark:from-zinc-600 dark:via-black dark:to-zinc-700 dark:border-white">
 
             <div className="w-full text-center text-5xl md:text-5xl font-pixelb text-nowrap pb-6 dark:text-gray-200">
                 Let's Talk!
@@ -49,7 +49,10 @@ function Contact() {
                                 type="text"
                                 name="name"
                                 required
-                                className="border-2 border-black rounded-lg p-2 md:p-3 bg-white text-black focus:outline-none focus:ring-2 focus:ring-black dark:bg-zinc-300"
+                                className="border-2 border-black rounded-lg p-2 md:p-3 bg-white text-black
+                                focus:outline-none focus:ring-2 focus:ring-black dark:bg-zinc-300
+                                dark:[filter:brightness(1)_drop-shadow(0_0_8px_rgba(255,255,255,0.6))]
+                                 dark:hover:[filter:drop-shadow(0_0_12px_rgba(255,255,255,0.8))]"
                             />
                         </label>
 
@@ -59,7 +62,10 @@ function Contact() {
                                 type="email"
                                 name="email"
                                 required
-                                className="border-2 border-black rounded-lg p-2 md:p-3 bg-white text-black focus:outline-none focus:ring-2 focus:ring-black dark:bg-zinc-300"
+                                className="border-2 border-black rounded-lg p-2 md:p-3 bg-white text-black
+                                focus:outline-none focus:ring-2 focus:ring-black
+                                dark:bg-zinc-300 dark:[filter:brightness(1)_drop-shadow(0_0_8px_rgba(255,255,255,0.6))]
+                                 dark:hover:[filter:drop-shadow(0_0_12px_rgba(255,255,255,0.8))]"
                             />
                         </label>
 
@@ -69,7 +75,10 @@ function Contact() {
                                 name="message"
                                 rows="4 sm:rows-5 md:rows-6"
                                 required
-                                className="border-2 resize-none h-40 border-black rounded-lg p-2 md:p-3 bg-white text-black focus:outline-none focus:ring-2 focus:ring-black dark:bg-zinc-300"
+                                className="border-2 resize-none h-40 border-black rounded-lg p-2 md:p-3
+                                bg-white text-black focus:outline-none focus:ring-2 focus:ring-black
+                                dark:bg-zinc-300 dark:[filter:brightness(1)_drop-shadow(0_0_8px_rgba(255,255,255,0.6))]
+                                 dark:hover:[filter:drop-shadow(0_0_12px_rgba(255,255,255,0.8))]"
                             ></textarea>
                         </label>
 

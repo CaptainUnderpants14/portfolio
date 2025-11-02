@@ -8,7 +8,7 @@ function Footer() {
     };
 
     return (
-        <div className="w-full h-24 pb-4 flex justify-evenly items-center dark dark:bg-zinc-700">
+        <div className="w-full h-24 pb-4 flex justify-evenly items-center dark:bg-zinc-700">
             <div className=" absolute w-full flex items-center justify-center">
                 <img src="/Heart.svg"
                      alt="Heart icon"

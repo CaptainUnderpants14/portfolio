@@ -2,10 +2,7 @@ import { useState } from 'react';
 import { IoSunnyOutline } from "react-icons/io5";
 import { IoIosMoon } from "react-icons/io";
 
-const NavBar = () => {
-
-    const [dark, setDark] = useState(false);
-    const toggleDark = () => {setDark(!dark);}
+const NavBar = ({ dark, toggleDark }) => {
 
     const playKeyboardClickSound = () => {
         const audio = new Audio("/sounds/spacebarClick.mp3");
@@ -40,65 +37,110 @@ const NavBar = () => {
                         <img
                             src="/navButtons.svg"
                             alt="Logo"
-                            className="w-14 md:w-16 lg:w-[72px] h-auto hover:scale-110 transition-transform duration-200 cursor-pointer
+                            className="w-14 md:w-16 lg:w-[72px] h-auto hover:cursor-pointer transition-transform duration-200
                             dark:[filter:brightness(1)_drop-shadow(0_0_8px_rgba(255,255,255,0.6))]
-                                 dark:hover:[filter:brightness(1.05)_drop-shadow(0_0_12px_rgba(255,255,255,0.8))]"
+                                 dark:hover:[filter:brightness(1.05)_drop-shadow(0_0_8px_rgba(255,255,255,0.8))]"
                             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                         />
                     </div>
 
                     <ul className="hidden md:flex gap-8 text-xl font-medium items-center dark:text-white">
                         <li
-                            className="font-bold cursor-pointer hover:scale-110 transition-transform duration-200 whitespace-nowrap"
+                            className="font-bold hover:cursor-pointer hover:scale-105 transition-transform duration-200 whitespace-nowrap"
                             onClick={() => scrollToSection("about")}>
                             About
                         </li>
                         <li
-                            className="font-bold cursor-pointer hover:scale-110 transition-transform duration-200 whitespace-nowrap"
+                            className="font-bold hover:cursor-pointer hover:scale-105 transition-transform duration-200 whitespace-nowrap"
                             onClick={() => scrollToSection("")}>
                             Projects
                         </li>
                         <li
-                            className="font-bold cursor-pointer hover:scale-110 transition-transform duration-200 whitespace-nowrap"
+                            className="font-bold hover:cursor-pointer hover:scale-105 transition-transform duration-200 whitespace-nowrap"
                             onClick={() => scrollToSection("")}>
                             Skills
                         </li>
                         <li
-                            className="font-bold  cursor-pointer hover:scale-110 transition-transform duration-200 whitespace-nowrap"
+                            className="font-bold hover:cursor-pointer hover:scale-105 transition-transform duration-200 whitespace-nowrap"
                             onClick={() => scrollToSection("contact")}>
                             Contact
                         </li>
                         <li >
-                            <button className="hover:cursor-pointer hover:scale-110 transition-transform px-3 py-1 font-bold border-2 rounded-3xl  duration-300 dark:text-white dark:border-white dark:bg-black"
+                            <button className="hover:cursor-pointer dark:hover:scale-100 hover:shadow-[0_0_18px_4px_rgba(0,0,0,0.7)]
+                            dark:hover:shadow-none dark:hover:[filter:brightness(1.08)_drop-shadow(0_0_18px_rgba(255,255,255,1.3))]
+                             transition-transform px-3 py-1 font-bold border-2 rounded-3xl duration-300
+                              dark:text-white dark:border-white dark:bg-black"
                                     onClick={toggleDark}>{dark ? "Light" : "Dark"}
                                 {/*<IoSunnyOutline />*/}
                                 {/*<IoIosMoon />*/}
                             </button>
                         </li>
                     </ul>
-
-                    {/* Mobile Menu Button */}
-                    <button
-                        className="md:hidden p-2 relative z-10"
-                        onClick={toggleMobileMenu}
-                    >
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            {isMobileMenuOpen ? (
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    {/* Container for both buttons */}
+                    <div className="md:hidden flex items-center gap-4">
+                        {/* Theme Toggle Button */}
+                        <button
+                            className="p-2 rounded-full text-black dark:text-white transition-transform duration-200 hover:scale-110"
+                            onClick={toggleDark}
+                            aria-label="Toggle theme"
+                        >
+                            {dark ? (
+                                <IoSunnyOutline size={24} />   // show sun in dark mode
                             ) : (
-                                <>
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16" />
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 12h16" />
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 18h16" />
-                                </>
+                                <IoIosMoon size={24} />        // show moon in light mode
                             )}
-                        </svg>
-                    </button>
+                        </button>
+
+                        {/* Mobile Menu Button */}
+                        <button
+                            className="p-2 relative z-10 text-black dark:text-white transition-transform duration-200 hover:scale-110"
+                            onClick={toggleMobileMenu}
+                            aria-label="Toggle menu"
+                        >
+                            <svg
+                                className="w-6 h-6"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                {isMobileMenuOpen ? (
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={2}
+                                        d="M6 18L18 6M6 6l12 12"
+                                    />
+                                ) : (
+                                    <>
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth={2}
+                                            d="M4 6h16"
+                                        />
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth={2}
+                                            d="M4 12h16"
+                                        />
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth={2}
+                                            d="M4 18h16"
+                                        />
+                                    </>
+                                )}
+                            </svg>
+                        </button>
+                    </div>
+
                 </div>
 
                 {/* Mobile Menu Dropdown */}
                 {isMobileMenuOpen && (
-                    <div className="md:hidden absolute top-full left-0 w-full bg-white border-t-2 border-dashed border-black shadow-lg z-40 ">
+                    <div className="md:hidden absolute top-full left-0 w-full bg-white border-t-2 border-dashed border-black shadow-lg z-40 dark:bg-zinc-700 dark:border-white">
                         <div className="w-[80%] max-w-7xl mx-auto px-4 sm:px-8 py-4">
                             <ul className="flex flex-col gap-4 text-lg font-medium items-start">
                                 <li
@@ -124,13 +166,6 @@ const NavBar = () => {
                                     onClick={() => scrollToSection("contact")}
                                 >
                                     Contact
-                                </li>
-                                <li >
-                                    <button className="font-bold text-black cursor-pointer hover:scale-110 transition-transform duration-200 whitespace-nowrap w-full py-2"
-                                            onClick={toggleDark}>{dark ? "Light" : "Dark"}
-                                        {/*<IoSunnyOutline />*/}
-                                        {/*<IoIosMoon />*/}
-                                    </button>
                                 </li>
                             </ul>
                         </div>
