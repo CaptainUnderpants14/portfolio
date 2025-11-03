@@ -57,7 +57,7 @@ const NavBar = ({ dark, toggleDark }) => {
                         </li>
                         <li
                             className="font-bold hover:cursor-pointer hover:scale-105 transition-transform duration-200 whitespace-nowrap"
-                            onClick={() => scrollToSection("")}>
+                            onClick={() => scrollToSection("skills")}>
                             Skills
                         </li>
                         <li
@@ -65,7 +65,7 @@ const NavBar = ({ dark, toggleDark }) => {
                             onClick={() => scrollToSection("contact")}>
                             Contact
                         </li>
-                        <li >
+                        <li  className="md:relative">
                             <button className="hover:cursor-pointer dark:hover:scale-100 hover:shadow-[0_0_18px_4px_rgba(0,0,0,0.7)]
                             dark:hover:shadow-none dark:hover:[filter:brightness(1.08)_drop-shadow(0_0_18px_rgba(255,255,255,1.3))]
                              transition-transform px-3 py-1 font-bold border-2 rounded-3xl duration-300
@@ -142,27 +142,27 @@ const NavBar = ({ dark, toggleDark }) => {
                 {isMobileMenuOpen && (
                     <div className="md:hidden absolute top-full left-0 w-full bg-white border-t-2 border-dashed border-black shadow-lg z-40 dark:bg-zinc-700 dark:border-white">
                         <div className="w-[80%] max-w-7xl mx-auto px-4 sm:px-8 py-4">
-                            <ul className="flex flex-col gap-4 text-lg font-medium items-start">
+                            <ul className="flex flex-col gap-4 text-lg font-medium items-start dark:text-white">
                                 <li
-                                    className="font-bold text-black cursor-pointer hover:scale-110 transition-transform duration-200 whitespace-nowrap w-full py-2"
+                                    className="font-bold cursor-pointer hover:scale-110 transition-transform duration-200 whitespace-nowrap w-full py-2"
                                     onClick={() => scrollToSection("about")}
                                 >
                                     About
                                 </li>
                                 <li
-                                    className="font-bold text-black cursor-pointer hover:scale-110 transition-transform duration-200 whitespace-nowrap w-full py-2"
+                                    className="font-bold cursor-pointer hover:scale-110 transition-transform duration-200 whitespace-nowrap w-full py-2"
                                     onClick={() => scrollToSection("skills")}
                                 >
                                     Skills
                                 </li>
                                 <li
-                                    className="font-bold text-black cursor-pointer hover:scale-110 transition-transform duration-200 whitespace-nowrap w-full py-2"
+                                    className="font-bold  cursor-pointer hover:scale-110 transition-transform duration-200 whitespace-nowrap w-full py-2"
                                     onClick={() => scrollToSection("projects")}
                                 >
                                     Projects
                                 </li>
                                 <li
-                                    className="font-bold text-black cursor-pointer hover:scale-110 transition-transform duration-200 whitespace-nowrap w-full py-2"
+                                    className="font-bold  cursor-pointer hover:scale-110 transition-transform duration-200 whitespace-nowrap w-full py-2"
                                     onClick={() => scrollToSection("contact")}
                                 >
                                     Contact

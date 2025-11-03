@@ -24,7 +24,8 @@ function Contact() {
             id="contact"
             className="relative border-b-2 border-dashed border-black pb-12 md:pb-18 md:px-12 lg:pb-18 pt-16 md:pt-18 lg:pt-18 dark:bg-gradient-to-b dark:from-zinc-600 dark:via-black dark:to-zinc-700 dark:border-white">
 
-            <div className="w-full text-center text-5xl md:text-5xl font-pixelb text-nowrap pb-6 dark:text-gray-200">
+            <div className="w-full text-center text-5xl md:text-5xl font-pixelb text-nowrap pb-6 dark:text-gray-200
+            dark:[filter:drop-shadow(0_0_12px_rgba(255,255,255,0.6))]">
                 Let's Talk!
             </div>
 
@@ -86,7 +87,7 @@ function Contact() {
                             id="sendButton"
                             type="submit"
                             className="w-24 md:w-32 lg:w-24 py-2  mt-1 font-pixelm text-lg md:text-2xl h-12 md:h-12 lg:h-14
-                            rounded-full bg-[#89F336] hover:scale-110 transition-transform duration-200
+                            rounded-full bg-[#89F336] hover:scale-110 transition-transform duration-300
                             dark:bg-zinc-100 dark:text-gray-900 dark:[filter:drop-shadow(0_0_8px_rgba(255,255,255,0.6))]
                                  dark:group-hover:[filter:drop-shadow(0_0_12px_rgba(255,255,255,0.8))]"
                         >

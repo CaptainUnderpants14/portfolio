@@ -19,7 +19,8 @@ function Skills() {
     };
 
     return (
-        <div className="w-full border-b-2 border-dashed py-16 relative dark:bg-gradient-to-b dark:from-zinc-700 dark:via-black dark:to-zinc-600
+        <div id="skills"
+            className="w-full border-b-2 border-dashed py-16 relative dark:bg-gradient-to-b dark:from-zinc-700 dark:via-black dark:to-zinc-600
                 dark:border-white">
             <div className="relative mb-28 w-[80%] md:w-full">
                 <div className="absolute left-10 top-0 md:left-12 lg:left-[13%] ">
@@ -37,7 +38,7 @@ function Skills() {
             <div className="w-[85%] mx-auto pt-7 md:w-[90%] md:-mb-10 lg:w-[78%] lg:-mb-4">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-4 text-xl justify-items-center lg:pt-10">
                     {/* Frontend */}
-                    <div className="rounded-xl shadow-xl bg-white border border-gray-300
+                    <ul className="rounded-xl shadow-xl bg-white border border-gray-300
                      w-[90%] h-[100%] md:w-[90%] md:h-full lg:w-[76%] flex flex-col justify-center text-center p-12 md:p-12
                      lg:hover:scale-105 transition-transform duration-200 cursor-pointer dark:bg-zinc-800 dark:border-zinc-500 dark:text-gray-200
                      dark:[box-shadow:inset_0_0_10px_rgba(255,255,255,0.5),_0_0_15px_rgba(255,255,255,0.5)]">
@@ -64,10 +65,10 @@ function Skills() {
                                 JavaScript
                             </li>
                         </ul>
-                    </div>
+                    </ul>
 
                     {/* Backend */}
-                    <div className="rounded-xl shadow-xl bg-white border border-gray-300 w-[90%]
+                    <ul className="rounded-xl shadow-xl bg-white border border-gray-300 w-[90%]
                      md:w-[90%] md:h-full lg:w-[76%] flex flex-col justify-center text-center p-12 md:p-12
                      lg:hover:scale-105 transition-transform duration-200 cursor-pointer dark:bg-zinc-800
                      dark:border-zinc-500 dark:text-gray-200 dark:[box-shadow:inset_0_0_10px_rgba(255,255,255,0.5),_0_0_15px_rgba(255,255,255,0.5)]">
@@ -94,10 +95,10 @@ function Skills() {
                                 MongoDB
                             </li>
                         </ul>
-                    </div>
+                    </ul>
 
                     {/* DevOps */}
-                    <div className="bg-white rounded-xl shadow-xl border border-gray-300 w-[90%]
+                    <ul className="bg-white rounded-xl shadow-xl border border-gray-300 w-[90%]
                      md:w-[90%] h-[360px] lg:w-[68%] md:h-[320px] flex flex-col justify-center text-center p-12 md:p-12
                      lg:hover:scale-105 transition-transform duration-200 cursor-pointer dark:bg-zinc-800
                       dark:border-zinc-500 dark:text-gray-200 dark:[box-shadow:inset_0_0_10px_rgba(255,255,255,0.5),_0_0_15px_rgba(255,255,255,0.5)]">
@@ -116,7 +117,7 @@ function Skills() {
                                 AWS
                             </li>
                         </ul>
-                    </div>
+                    </ul>
                 </div>
             </div>
 
