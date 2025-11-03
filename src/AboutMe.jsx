@@ -101,7 +101,7 @@ function AboutMe() {
                     src="/pacman%20logo.svg"
                     alt="Pacman Icon"
                     // onClick={playPacmanSound}
-                    className="absolute right-12 z-30 -bottom-28 w-48 md:w-44 lg:w-56 h-auto hover:cursor-pointer hover:scale-110 transition-transform duration-200 lg:-bottom-34 lg:right-24
+                    className="absolute right-12 z-10 -bottom-28 w-48 md:w-44 lg:w-56 h-auto hover:cursor-pointer hover:scale-110 transition-transform duration-200 lg:-bottom-34 lg:right-24
                                 dark:[filter:brightness(0.90)_drop-shadow(0_0_8px_rgba(255,255,255,0.6))]
                                  dark:hover:[filter:brightness(0.96)_drop-shadow(0_0_12px_rgba(255,255,255,0.8))]"
                 />

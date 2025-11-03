@@ -127,7 +127,7 @@ function Skills() {
                     src="/Phone.svg"
                     alt="Phone icon"
                     // onClick={playDialerSound}
-                    className="absolute w-16 z-30 top-4 left-12 md:w-24 md:left-20 lg:left-[16%] h-auto hover:cursor-pointer hover:scale-110 transition-transform duration-200
+                    className="absolute w-16 z-10 top-4 left-12 md:w-24 md:left-20 lg:left-[16%] h-auto hover:cursor-pointer hover:scale-110 transition-transform duration-200
                     dark:[filter:brightness(0.95)_drop-shadow(0_0_8px_rgba(255,255,255,0.6))]
                                  dark:hover:[filter:drop-shadow(0_0_12px_rgba(255,255,255,0.8))]"
                 />
@@ -135,7 +135,7 @@ function Skills() {
                     src="/convoBubble.svg"
                     alt="Text bubble icon"
                     onClick={playMessageSound}
-                    className="absolute w-20 z-30 -top-4 right-8 md:w-32 md:right-24 md:-top-8 lg:right-[16%] h-auto hover:cursor-pointer hover:scale-110 transition-transform duration-200
+                    className="absolute w-20 z-10 -top-4 right-8 md:w-32 md:right-24 md:-top-8 lg:right-[16%] h-auto hover:cursor-pointer hover:scale-110 transition-transform duration-200
                    dark:[filter:brightness(0.85)_drop-shadow(0_0_8px_rgba(255,255,255,0.6))]
                                  dark:hover:[filter:brightness(0.95)_drop-shadow(0_0_12px_rgba(255,255,255,0.8))]"
                 />
