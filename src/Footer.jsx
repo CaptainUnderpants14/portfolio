@@ -30,7 +30,7 @@ function Footer() {
                     <p className="text-[18px] inline-block md:block text-center md:text-[24px] font-pixelm"> Paras Sharma</p>
                 </p>
                 <p className="text-[16px] md:text-xl">
-                    &copy; 2025.{" "}
+                    &copy; 2026.{" "}
                     <span className="text-[18px] md:text-xl">All rights reserved</span>
                 </p>
             </div>

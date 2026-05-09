@@ -101,8 +101,7 @@ const NavBar = ({ dark, toggleDark }) => {
                                 className="w-6 h-6"
                                 fill="none"
                                 stroke="currentColor"
-                                viewBox="0 0 24 24"
-                            >
+                                viewBox="0 0 24 24">
                                 {isMobileMenuOpen ? (
                                     <path
                                         strokeLinecap="round"
@@ -144,25 +143,25 @@ const NavBar = ({ dark, toggleDark }) => {
                         <div className="w-[80%] max-w-7xl mx-auto px-4 sm:px-8 py-4">
                             <ul className="flex flex-col gap-4 text-lg font-medium items-start dark:text-white">
                                 <li
-                                    className="font-bold cursor-pointer hover:scale-110 transition-transform duration-200 whitespace-nowrap w-full py-2"
+                                    className="font-bold cursor-pointer transition-transform duration-200 hover:text-xl whitespace-nowrap w-full py-2"
                                     onClick={() => scrollToSection("about")}
                                 >
                                     About
                                 </li>
                                 <li
-                                    className="font-bold cursor-pointer hover:scale-110 transition-transform duration-200 whitespace-nowrap w-full py-2"
+                                    className="font-bold cursor-pointer hover:text-xl transition-transform duration-200 whitespace-nowrap w-full py-2"
                                     onClick={() => scrollToSection("skills")}
                                 >
                                     Skills
                                 </li>
                                 <li
-                                    className="font-bold  cursor-pointer hover:scale-110 transition-transform duration-200 whitespace-nowrap w-full py-2"
+                                    className="font-bold  cursor-pointer hover:text-xl transition-transform duration-200 whitespace-nowrap w-full py-2"
                                     onClick={() => scrollToSection("projects")}
                                 >
                                     Projects
                                 </li>
                                 <li
-                                    className="font-bold  cursor-pointer hover:scale-110 transition-transform duration-200 whitespace-nowrap w-full py-2"
+                                    className="font-bold  cursor-pointer hover:text-xl transition-transform duration-200 whitespace-nowrap w-full py-2"
                                     onClick={() => scrollToSection("contact")}
                                 >
                                     Contact
