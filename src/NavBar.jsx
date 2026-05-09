@@ -4,6 +4,13 @@ import { IoIosMoon } from "react-icons/io";
 
 const NavBar = ({ dark, toggleDark }) => {
 
+    const playClickSound = () => {
+        const audio = new Audio("/sounds/finalClick.mp3");
+        audio.play().catch((error) => {
+            console.error("Audio play failed:", error);
+        });
+    };
+
     const playKeyboardClickSound = () => {
         const audio = new Audio("/sounds/spacebarClick.mp3");
         audio.play().catch((error) => {
@@ -40,39 +47,46 @@ const NavBar = ({ dark, toggleDark }) => {
                             className="w-14 md:w-16 lg:w-[72px] h-auto hover:cursor-pointer transition-transform duration-200
                             md:dark:[filter:brightness(1)_drop-shadow(0_0_8px_rgba(255,255,255,0.6))]
                                  md:dark:hover:[filter:brightness(1.05)_drop-shadow(0_0_8px_rgba(255,255,255,0.8))]"
-                            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                            onClick={() => {window.scrollTo({ top: 0, behavior: "smooth" }); playClickSound();}}
                         />
                     </div>
 
                     <ul className="hidden md:flex gap-8 text-xl font-medium items-center dark:text-white">
                         <li
                             className="font-bold hover:cursor-pointer hover:scale-105 transition-transform duration-200 whitespace-nowrap"
-                            onClick={() => scrollToSection("about")}>
+                            onClick={() => {
+                                scrollToSection("about");
+                                playClickSound();
+                            }}>
                             About
                         </li>
                         <li
                             className="font-bold hover:cursor-pointer hover:scale-105 transition-transform duration-200 whitespace-nowrap"
-                            onClick={() => scrollToSection("")}>
+                            onClick={() => {scrollToSection(""); playClickSound();}}>
                             Projects
                         </li>
                         <li
                             className="font-bold hover:cursor-pointer hover:scale-105 transition-transform duration-200 whitespace-nowrap"
-                            onClick={() => scrollToSection("skills")}>
+                            onClick={() => {scrollToSection("skills"); playClickSound();}}>
                             Skills
                         </li>
                         <li
                             className="font-bold hover:cursor-pointer hover:scale-105 transition-transform duration-200 whitespace-nowrap"
-                            onClick={() => scrollToSection("contact")}>
+                            onClick={() => {scrollToSection("contact"); playClickSound();}}>
                             Contact
                         </li>
                         <li  className="md:relative">
-                            <button className="hover:cursor-pointer dark:hover:scale-100 hover:shadow-[0_0_18px_4px_rgba(0,0,0,0.7)]
-                            dark:hover:shadow-none dark:hover:[filter:brightness(1.08)_drop-shadow(0_0_18px_rgba(255,255,255,1.3))]
-                             transition-transform px-3 py-1 font-bold border-2 rounded-3xl duration-300
-                              dark:text-white dark:border-white dark:bg-black"
-                                    onClick={toggleDark}>{dark ? "Light" : "Dark"}
-                                {/*<IoSunnyOutline />*/}
-                                {/*<IoIosMoon />*/}
+                            <button
+                                className="hover:cursor-pointer dark:hover:scale-100 hover:shadow-[0_0_18px_4px_rgba(0,0,0,0.7)]
+                                dark:hover:shadow-none dark:hover:[filter:brightness(1.08)_drop-shadow(0_0_18px_rgba(255,255,255,1.3))]
+                                transition-transform px-3 py-1 font-bold border-2 rounded-3xl duration-300
+                                dark:text-white dark:border-white dark:bg-black"
+                                onClick={() => {
+                                    toggleDark();
+                                    playClickSound();
+                                }}
+                                >
+                                {dark ? "Light" : "Dark"}
                             </button>
                         </li>
                     </ul>

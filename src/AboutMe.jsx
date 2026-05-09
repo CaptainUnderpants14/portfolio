@@ -1,5 +1,3 @@
-import React, { useRef } from "react";
-
 function AboutMe() {
     const playControllerSound = () => {
         const audio = new Audio("/sounds/retroLaser.mp3");
@@ -7,19 +5,6 @@ function AboutMe() {
             console.error("Audio play failed:", error);
         });
     };
-
-    // const audioRef = useRef(null);
-    // const playPacmanSound = () => {
-    //     if (!audioRef.current) {
-    //         audioRef.current = new Audio("/sounds/pacman.mp3");
-    //     }
-    //     const audio = audioRef.current;
-    //     if (!audio.paused) return;
-    //     audio.currentTime = 0;
-    //     audio.play().catch((error) => {
-    //         console.error("Audio play failed:", error);
-    //     });
-    // };
 
     return (
         <div

@@ -18,6 +18,13 @@ function Contact() {
         }
     };
 
+    const playClickSound = () => {
+        const audio = new Audio("/sounds/finalClick.mp3");
+        audio.play().catch((error) => {
+            console.error("Audio play failed:", error);
+        });
+    };
+
 
     return (
         <div
@@ -84,6 +91,7 @@ function Contact() {
                         </label>
 
                         <button
+                            onClick={playClickSound}
                             id="sendButton"
                             type="submit"
                             className="w-24 md:w-32 lg:w-24 py-2  mt-1 font-pixelm text-lg md:text-2xl h-12 md:h-12 lg:h-14
@@ -139,6 +147,7 @@ function Contact() {
                                 }
                             }}>
                             <img
+                                onClick={playClickSound}
                                 src="/Mail.svg"
                                 alt="Mail logo"
                                 className="hidden md:block w-12 md:w-16 lg:w-20 h-auto transition-transform duration-200 group-hover:scale-110 md:-rotate-3
@@ -163,6 +172,7 @@ function Contact() {
                     </div>
 
                     <a
+                        onClick={playClickSound}
                         href="https://www.linkedin.com/in/paras-sharma-514a8426a/"
                         target="_blank"
                         className="group md:self-end">
@@ -176,6 +186,7 @@ function Contact() {
                     </a>
 
                     <a
+                        onClick={playClickSound}
                         href="https://github.com/CaptainUnderpants14"
                         target="_blank"
                         className="group md:self-start">
@@ -189,6 +200,7 @@ function Contact() {
                     </a>
 
                     <a
+                        onClick={playClickSound}
                         href="https://www.instagram.com/parassharma1466/"
                         target="_blank"
                         className="group md:self-end">

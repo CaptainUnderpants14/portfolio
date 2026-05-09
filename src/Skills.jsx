@@ -1,20 +1,6 @@
-// import { useRef } from "react";
-
 function Skills() {
-    // const audioRef = useRef(null);
-
-    // const playDialerSound = () => {
-    //     if (!audioRef.current) {
-    //         audioRef.current = new Audio("/sounds/dialing.mp3");
-    //     }
-    //     const audio = audioRef.current;
-    //     if (!audio.paused) return;
-    //     audio.currentTime = 0;
-    //     audio.play();
-    // };
-
     const playMessageSound = () => {
-        const audio = new Audio("/sounds/messageSound.mp3");
+        const audio = new Audio("/sounds/finalClick.mp3");
         audio.play();
     };
 
