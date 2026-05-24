@@ -1,6 +1,7 @@
 function Contact() {
     const onSubmit = async (event) => {
         event.preventDefault();
+
         const formData = new FormData(event.target);
         formData.append("access_key", "ce6a2c05-59bb-4235-85e9-a10eb17460a0");
 
@@ -25,195 +26,310 @@ function Contact() {
         });
     };
 
+    const copyEmail = () => {
+        const email = "parassharma8890@gmail.com";
+
+        if (navigator.clipboard && window.isSecureContext) {
+            navigator.clipboard
+                .writeText(email)
+                .then(showCopiedMessage)
+                .catch(() => fallbackCopyTextToClipboard(email));
+        } else {
+            fallbackCopyTextToClipboard(email);
+        }
+
+        function fallbackCopyTextToClipboard(text) {
+            const textArea = document.createElement("textarea");
+
+            textArea.value = text;
+            textArea.style.position = "fixed";
+            textArea.style.top = "-1000px";
+
+            document.body.appendChild(textArea);
+
+            textArea.focus();
+            textArea.select();
+
+            try {
+                document.execCommand("copy");
+                showCopiedMessage();
+            } catch (err) {
+                console.error("Fallback: Copy failed", err);
+            }
+
+            document.body.removeChild(textArea);
+        }
+
+        function showCopiedMessage() {
+            const emailText = document.getElementById("email");
+
+            emailText.innerText = "Email Copied!";
+
+            setTimeout(() => {
+                emailText.innerText = "Copy Email";
+            }, 15000);
+        }
+    };
 
     return (
         <div
             id="contact"
-            className="relative border-b-2 border-dashed border-black pb-12 md:pb-18 md:px-12 lg:pb-18 pt-16 md:pt-18 lg:pt-18 dark:bg-gradient-to-b dark:from-zinc-600 dark:via-black dark:to-zinc-700 dark:border-white">
+            className="relative border-b-2 py-12 border-dashed border-black px-5 lg:px-8 dark:bg-gradient-to-b dark:from-zinc-600 dark:via-black dark:to-zinc-700 dark:border-white"
+        >
+            <div className="w-[92%] md:w-[78%] xl:w-[60vw] max-w-[980px] mx-auto dark:text-gray-200">
 
-            <div className="w-full text-center text-5xl md:text-5xl font-pixelb text-nowrap pb-6 dark:text-gray-200
-            dark:[filter:drop-shadow(0_0_12px_rgba(255,255,255,0.6))]">
-                Let's Talk!
-            </div>
+                {/* Heading */}
+                <div className="w-full pb-4 text-center text-4xl md:text-6xl font-pixelb dark:[filter:drop-shadow(0_0_12px_rgba(255,255,255,0.6))]">
+                    Let's Talk!
+                </div>
 
-            <div className="text-xl w-[90%] lg:w-[80%] mx-auto flex flex-col items-center md:w-full md:items-start md:text-2xl font-semibold mt-4 md:px-8 md:mt-6 lg:mt-8 dark:text-gray-200">
-                <p className="mb-2">Got an idea, opportunity or a challenge?</p>
-                <p>
-                    Don't worry, I have the skills to{" "}
-                    <span className="text-center md:text-left block lg:inline-block font-pixelm pt-2 pb-12">make it happen!</span>
-                </p>
-            </div>
-
-            <div className="w-[80%] md:w-full lg:w-[76%] mx-auto flex flex-col-reverse md:flex-row-reverse lg:flex-row gap-8 md:gap-44 lg:gap-18 lg:items-center px-4 md:px-8 lg:px-0 dark:text-gray-200">
-                {/* Form */}
-                <div className="flex-1 order-2 lg:order-1">
-                    <form
-                        id="contactForm"
-                        onSubmit={onSubmit}
-                        className="md:mt-9 flex flex-col gap-6 md:gap-6 text-m md:text-xl w-full md:w-92 lg:w-[120%]">
-                        <label className="flex flex-col gap-1 md:gap-2">
-                            <span className="font-semibold">Your Name</span>
-                            <input
-                                type="text"
-                                name="name"
-                                required
-                                className="border-2 border-black rounded-lg p-2 md:p-3 bg-white text-black
-                                focus:outline-none focus:ring-2 focus:ring-black dark:bg-zinc-300
-                                dark:[filter:brightness(1)_drop-shadow(0_0_8px_rgba(255,255,255,0.6))]
-                                 dark:hover:[filter:drop-shadow(0_0_12px_rgba(255,255,255,0.8))]"
-                            />
-                        </label>
-
-                        <label className="flex flex-col gap-1 md:gap-2">
-                            <span className="font-semibold">Email</span>
-                            <input
-                                type="email"
-                                name="email"
-                                required
-                                className="border-2 border-black rounded-lg p-2 md:p-3 bg-white text-black
-                                focus:outline-none focus:ring-2 focus:ring-black
-                                dark:bg-zinc-300 dark:[filter:brightness(1)_drop-shadow(0_0_8px_rgba(255,255,255,0.6))]
-                                 dark:hover:[filter:drop-shadow(0_0_12px_rgba(255,255,255,0.8))]"
-                            />
-                        </label>
-
-                        <label className="flex flex-col gap-1 md:gap-2">
-                            <span className="font-semibold">Message</span>
-                            <textarea
-                                name="message"
-                                rows="4 sm:rows-5 md:rows-6"
-                                required
-                                className="border-2 resize-none h-40 border-black rounded-lg p-2 md:p-3
-                                bg-white text-black focus:outline-none focus:ring-2 focus:ring-black
-                                dark:bg-zinc-300 dark:[filter:brightness(1)_drop-shadow(0_0_8px_rgba(255,255,255,0.6))]
-                                 dark:hover:[filter:drop-shadow(0_0_12px_rgba(255,255,255,0.8))]"
-                            ></textarea>
-                        </label>
-
-                        <button
-                            onClick={playClickSound}
-                            id="sendButton"
-                            type="submit"
-                            className="w-24 md:w-32 lg:w-24 py-2  mt-1 font-pixelm text-lg md:text-2xl h-12 md:h-12 lg:h-14
-                            rounded-full bg-[#89F336] hover:scale-110 transition-transform duration-300
-                            dark:bg-zinc-100 dark:text-gray-900 dark:[filter:drop-shadow(0_0_8px_rgba(255,255,255,0.6))]
-                                 dark:group-hover:[filter:drop-shadow(0_0_12px_rgba(255,255,255,0.8))]"
-                        >
-                            Send
-                        </button>
-                    </form>
-                    <p className="font-pixelm text-center text-2xl mt-8 md:hidden">
-                        My Socials
+                {/* Subtitle */}
+                <div className="text-lg md:text-2xl pb-8 lg:text-2xl max-w-2xl md:max-w-4xl mx-auto text-center font-semibold">
+                    <p>
+                        Got an idea, opportunity or a challenge?
+                    </p>
+                    <p>
+                        Don't worry, I have the skills to{" "}
+                        <span className="font-pixelm block sm:inline">
+                            make it happen!
+                        </span>
                     </p>
                 </div>
 
-                {/* Social icons */}
-                <div className="relative flex-1 w-full flex flex-row md:flex-col md:-mt-16 items-center justify-between gap-4 order-1 lg:order-2 lg:ml-[20%]">
-                    {/* Email */}
-                    <div className="relative group md:self-start">
-                        <button
-                            className="flex flex-col items-center focus:outline-none hover:cursor-pointer"
-                            onClick={() => {
-                                const email = "parassharma8890@gmail.com";
-                                if (navigator.clipboard && window.isSecureContext) {
-                                    navigator.clipboard.writeText(email).then(showCopiedMessage).catch(() => fallbackCopyTextToClipboard(email));
-                                } else {
-                                    fallbackCopyTextToClipboard(email);
-                                }
+                <div className="flex flex-col lg:flex-row gap-8 lg:gap-10 lg:items-start">
 
-                                function fallbackCopyTextToClipboard(text) {
-                                    const textArea = document.createElement("textarea");
-                                    textArea.value = text;
-                                    textArea.style.position = "fixed";
-                                    textArea.style.top = "-1000px";
-                                    document.body.appendChild(textArea);
-                                    textArea.focus();
-                                    textArea.select();
-                                    try {
-                                        document.execCommand("copy");
-                                        showCopiedMessage();
-                                    } catch (err) {
-                                        console.error("Fallback: Copy failed", err);
-                                    }
-                                    document.body.removeChild(textArea);
-                                }
+                    {/* FORM */}
+                    <div className="flex-1 order-2 lg:order-1">
 
-                                function showCopiedMessage() {
-                                    const emailText = document.getElementById("email");
-                                    emailText.innerText = "Email Copied!";
-                                    setTimeout(() => {
-                                        emailText.innerText = "Copy Email";
-                                    }, 15000);
-                                }
-                            }}>
-                            <img
+                        <form
+                            id="contactForm"
+                            onSubmit={onSubmit}
+                            className="flex flex-col  gap-4 sm:gap-5 text-base md:text-2xl lg:text-lg w-full max-w-xl mx-auto lg:mx-0"
+                        >
+
+                            {/* Name */}
+                            <label className="flex flex-col gap-1 md:gap-2">
+                                <span className="font-semibold">
+                                    Your Name
+                                </span>
+
+                                <input
+                                    type="text"
+                                    name="name"
+                                    required
+                                    className="border-2 border-black rounded-lg p-2.5 bg-white text-black
+                                    focus:outline-none focus:ring-2 focus:ring-black
+                                    dark:bg-zinc-300
+                                    dark:[filter:brightness(1)_drop-shadow(0_0_8px_rgba(255,255,255,0.6))]
+                                    dark:hover:[filter:drop-shadow(0_0_12px_rgba(255,255,255,0.8))]"
+                                />
+                            </label>
+
+                            {/* Email */}
+                            <label className="flex flex-col gap-1 md:gap-2">
+                                <span className="font-semibold">
+                                    Email
+                                </span>
+
+                                <input
+                                    type="email"
+                                    name="email"
+                                    required
+                                    className="border-2 border-black rounded-lg p-2.5 bg-white text-black
+                                    focus:outline-none focus:ring-2 focus:ring-black
+                                    dark:bg-zinc-300
+                                    dark:[filter:brightness(1)_drop-shadow(0_0_8px_rgba(255,255,255,0.6))]
+                                    dark:hover:[filter:drop-shadow(0_0_12px_rgba(255,255,255,0.8))]"
+                                />
+                            </label>
+
+                            {/* Message */}
+                            <label className="flex flex-col gap-1 md:gap-2">
+                                <span className="font-semibold">
+                                    Message
+                                </span>
+
+                                <textarea
+                                    name="message"
+                                    rows={6}
+                                    required
+                                    className="border-2 resize-none h-32 border-black rounded-lg p-2.5
+                                    bg-white text-black focus:outline-none focus:ring-2 focus:ring-black
+                                    dark:bg-zinc-300
+                                    dark:[filter:brightness(1)_drop-shadow(0_0_8px_rgba(255,255,255,0.6))]
+                                    dark:hover:[filter:drop-shadow(0_0_12px_rgba(255,255,255,0.8))]"
+                                ></textarea>
+                            </label>
+
+                            {/* Button */}
+                            <button
                                 onClick={playClickSound}
-                                src="/Mail.svg"
-                                alt="Mail logo"
-                                className="hidden md:block w-12 md:w-16 lg:w-20 h-auto transition-transform duration-200 group-hover:scale-110 md:-rotate-3
-                                dark:[filter:brightness(0.90)_drop-shadow(0_0_8px_rgba(255,255,255,0.6))]
-                                 dark:hover:[filter:drop-shadow(0_0_12px_rgba(255,255,255,0.8))]"
-                            />
-                            <p
-                                id="email"
-                                className="hidden md:block text-xs sm:text-sm md:text-lg font-pixelm text-nowrap transition-transform duration-200 group-hover:scale-110 text-center mt-1">
-                                Copy Email
-                            </p>
-                        </button>
-                        <a className="md:hidden" href="mailto:parassharma8890@gmail.com?subject=Inquiring about ...">
-                            <img
-                                src="/Mail.svg"
-                                alt="Mail logo"
-                                className="w-12 md:w-16 lg:w-20 h-auto transition-transform duration-200 group-hover:scale-110
+                                id="sendButton"
+                                type="submit"
+                                className="w-24 md:w-30 py-2 font-pixelm text-lg md:text-2xl
+                                rounded-full bg-[#89F336] hover:scale-110 transition-transform duration-300
+                                dark:bg-zinc-100 dark:text-gray-900
                                 dark:[filter:drop-shadow(0_0_8px_rgba(255,255,255,0.6))]
-                                 dark:group-hover:[filter:drop-shadow(0_0_12px_rgba(255,255,255,0.8))]"
-                            />
-                        </a>
+                                dark:group-hover:[filter:drop-shadow(0_0_12px_rgba(255,255,255,0.8))]"
+                            >
+                                Send
+                            </button>
+
+                        </form>
+
+                        {/* MOBILE SOCIALS */}
+                        <div className="flex flex-col items-center mt-10 gap-4 lg:hidden">
+
+                            <p className="font-pixelm text-2xl md:text-4xl">
+                                My Socials
+                            </p>
+
+                            <div className="flex items-center justify-center gap-10">
+
+                                {/* Mail */}
+                                <a
+                                    onClick={playClickSound}
+                                    href="mailto:parassharma8890@gmail.com?subject=Inquiring about ..."
+                                    className="group"
+                                >
+                                    <img
+                                        src="/Mail.svg"
+                                        alt="Mail logo"
+                                        className="w-10 sm:w-12 h-auto transition-transform duration-200 group-hover:scale-110
+                                        dark:[filter:drop-shadow(0_0_8px_rgba(255,255,255,0.6))]
+                                        dark:group-hover:[filter:drop-shadow(0_0_12px_rgba(255,255,255,0.8))]"
+                                    />
+                                </a>
+
+                                {/* LinkedIn */}
+                                <a
+                                    onClick={playClickSound}
+                                    href="https://www.linkedin.com/in/paras-sharma-514a8426a/"
+                                    target="_blank"
+                                    className="group"
+                                >
+                                    <img
+                                        src="/linkedinlogo2.svg"
+                                        alt="LinkedIn"
+                                        className="w-10 sm:w-12 h-auto transition-transform duration-200 group-hover:scale-110
+                                        dark:[filter:brightness(0.90)_drop-shadow(0_0_8px_rgba(255,255,255,0.6))]
+                                        dark:hover:[filter:drop-shadow(0_0_12px_rgba(255,255,255,0.8))]"
+                                    />
+                                </a>
+
+                                {/* Github */}
+                                <a
+                                    onClick={playClickSound}
+                                    href="https://github.com/CaptainUnderpants14"
+                                    target="_blank"
+                                    className="group"
+                                >
+                                    <img
+                                        src="/githubLogo2.svg"
+                                        alt="Github Logo"
+                                        className="w-9 sm:w-10 h-auto transition-transform duration-200 group-hover:scale-110
+                                        dark:[filter:brightness(0.90)_drop-shadow(0_0_8px_rgba(255,255,255,0.6))]
+                                        dark:hover:[filter:drop-shadow(0_0_12px_rgba(255,255,255,0.8))]"
+                                    />
+                                </a>
+
+                                {/* Instagram */}
+                                <a
+                                    onClick={playClickSound}
+                                    href="https://www.instagram.com/parassharma1466/"
+                                    target="_blank"
+                                    className="group"
+                                >
+                                    <img
+                                        src="/instalogo.svg"
+                                        alt="Instagram Logo"
+                                        className="w-9 sm:w-10 h-auto transition-transform duration-200 group-hover:scale-110
+                                        dark:[filter:brightness(0.90)_drop-shadow(0_0_8px_rgba(255,255,255,0.6))]
+                                        dark:hover:[filter:brightness(0.95)_drop-shadow(0_0_12px_rgba(255,255,255,0.8))]"
+                                    />
+                                </a>
+
+                            </div>
+                        </div>
                     </div>
 
-                    <a
-                        onClick={playClickSound}
-                        href="https://www.linkedin.com/in/paras-sharma-514a8426a/"
-                        target="_blank"
-                        className="group md:self-end">
-                        <img
-                            src="/linkedinlogo2.svg"
-                            alt="LinkedIn"
-                            className="w-12 md:w-16 lg:w-24 h-auto transition-transform duration-200 group-hover:scale-110 md:rotate-3
-                            dark:[filter:brightness(0.90)_drop-shadow(0_0_8px_rgba(255,255,255,0.6))]
-                                 dark:hover:[filter:drop-shadow(0_0_12px_rgba(255,255,255,0.8))]"
-                        />
-                    </a>
+                    {/* DESKTOP SOCIALS */}
+                    <div className="hidden lg:flex relative w-full lg:w-44 flex-row lg:flex-col items-center justify-center gap-5 sm:gap-6 order-1 lg:order-2 lg:pt-2">
 
-                    <a
-                        onClick={playClickSound}
-                        href="https://github.com/CaptainUnderpants14"
-                        target="_blank"
-                        className="group md:self-start">
-                        <img
-                            src="/githubLogo2.svg"
-                            alt="Github Logo"
-                            className="w-10 md:w-16 lg:w-20 h-auto transition-transform duration-200 group-hover:scale-110 md:-rotate-5
-                                 dark:[filter:brightness(0.90)_drop-shadow(0_0_8px_rgba(255,255,255,0.6))]
-                                 dark:hover:[filter:drop-shadow(0_0_12px_rgba(255,255,255,0.8))]"
-                        />
-                    </a>
+                        {/* Email */}
+                        <div className="relative group lg:self-start">
+                            <button
+                                className="flex flex-col items-center focus:outline-none hover:cursor-pointer"
+                                onClick={copyEmail}
+                            >
+                                <img
+                                    onClick={playClickSound}
+                                    src="/Mail.svg"
+                                    alt="Mail logo"
+                                    className="w-12 lg:w-14 h-auto transition-transform duration-200 group-hover:scale-110 lg:-rotate-3
+                                    dark:[filter:brightness(0.90)_drop-shadow(0_0_8px_rgba(255,255,255,0.6))]
+                                    dark:hover:[filter:drop-shadow(0_0_12px_rgba(255,255,255,0.8))]"
+                                />
 
-                    <a
-                        onClick={playClickSound}
-                        href="https://www.instagram.com/parassharma1466/"
-                        target="_blank"
-                        className="group md:self-end">
-                        <img
-                            src="/instalogo.svg"
-                            alt="Instagram Logo"
-                            className="w-10 md:w-16 lg:w-20 h-auto transition-transform duration-200 group-hover:scale-110 md:rotate-3
-                            dark:[filter:brightness(0.90)_drop-shadow(0_0_8px_rgba(255,255,255,0.6))]
-                                 dark:hover:[filter:brightness(0.95)_drop-shadow(0_0_12px_rgba(255,255,255,0.8))]"
-                        />
-                    </a>
+                                <p
+                                    id="email"
+                                    className="text-xs lg:text-sm font-pixelm text-nowrap transition-transform duration-200 group-hover:scale-110 text-center mt-1"
+                                >
+                                    Copy Email
+                                </p>
+                            </button>
+                        </div>
+
+                        {/* LinkedIn */}
+                        <a
+                            onClick={playClickSound}
+                            href="https://www.linkedin.com/in/paras-sharma-514a8426a/"
+                            target="_blank"
+                            className="group lg:self-end"
+                        >
+                            <img
+                                src="/linkedinlogo2.svg"
+                                alt="LinkedIn"
+                                className="w-10 sm:w-12 lg:w-16 h-auto transition-transform duration-200 group-hover:scale-110 lg:rotate-3
+                                dark:[filter:brightness(0.90)_drop-shadow(0_0_8px_rgba(255,255,255,0.6))]
+                                dark:hover:[filter:drop-shadow(0_0_12px_rgba(255,255,255,0.8))]"
+                            />
+                        </a>
+
+                        {/* Github */}
+                        <a
+                            onClick={playClickSound}
+                            href="https://github.com/CaptainUnderpants14"
+                            target="_blank"
+                            className="group lg:self-start"
+                        >
+                            <img
+                                src="/githubLogo2.svg"
+                                alt="Github Logo"
+                                className="w-9 sm:w-10 lg:w-14 h-auto transition-transform duration-200 group-hover:scale-110 lg:-rotate-5
+                                dark:[filter:brightness(0.90)_drop-shadow(0_0_8px_rgba(255,255,255,0.6))]
+                                dark:hover:[filter:drop-shadow(0_0_12px_rgba(255,255,255,0.8))]"
+                            />
+                        </a>
+
+                        {/* Instagram */}
+                        <a
+                            onClick={playClickSound}
+                            href="https://www.instagram.com/parassharma1466/"
+                            target="_blank"
+                            className="group lg:self-end"
+                        >
+                            <img
+                                src="/instalogo.svg"
+                                alt="Instagram Logo"
+                                className="w-9 sm:w-10 lg:w-14 h-auto transition-transform duration-200 group-hover:scale-110 lg:rotate-3
+                                dark:[filter:brightness(0.90)_drop-shadow(0_0_8px_rgba(255,255,255,0.6))]
+                                dark:hover:[filter:brightness(0.95)_drop-shadow(0_0_12px_rgba(255,255,255,0.8))]"
+                            />
+                        </a>
+
+                    </div>
                 </div>
-
             </div>
         </div>
     );

@@ -1,8 +1,16 @@
 @import 'tailwindcss';
 @custom-variant dark (&:where(.dark, .dark *));
 
-html, body, a, div, p, span {
-    @apply transition-colors duration-300;
+
+:root {
+    --jk-x: 50vw;
+    --jk-y: 50vh;
+}
+
+
+html[data-theme="just-kidding"],
+html[data-theme="just-kidding"] body {
+    background: #000;
 }
 
 @font-face {
@@ -65,7 +73,111 @@ html, body, a, div, p, span {
     animation: typing 4s steps(6, end) infinite, blink 0.5s step-end infinite;
 }
 
+.dash {
+    width: 14px;
+    height: 4px;
+    background: black;
 
+    animation: dashDisappear 0.01s steps(1) forwards;
+}
 
+@keyframes dashDisappear {
+    to {
+        opacity: 0;
+    }
+}
 
+.just-kidding-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 90;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 6.5rem;
+    pointer-events: none;
+    background:
+        radial-gradient(
+            circle 140px at var(--jk-x) var(--jk-y),
+            transparent 0,
+            transparent 110px,
+            rgba(0, 0, 0, 0.62) 155px,
+            rgba(0, 0, 0, 0.96) 230px,
+            #000 320px
+        );
+}
 
+.just-kidding-overlay::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(
+            circle 175px at var(--jk-x) var(--jk-y),
+            rgba(255, 248, 215, 0.14) 0,
+            rgba(255, 248, 215, 0.08) 70px,
+            rgba(255, 248, 215, 0.03) 115px,
+            transparent 165px
+        );
+}
+
+.just-kidding-title {
+    position: relative;
+    z-index: 1;
+    padding: 0.55rem 1rem;
+    border: 2px dashed rgba(255, 255, 255, 0.72);
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.78);
+    color: #fff;
+    font-family: PixelB, "sans-serif";
+    font-size: clamp(1rem, 1.7vw, 1.4rem);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.18);
+}
+
+html[data-theme="just-kidding"] body,
+html[data-theme="just-kidding"] body * {
+    transition: none !important;
+    animation: none !important;
+    --tw-scale-x: 1 !important;
+    --tw-scale-y: 1 !important;
+    --tw-scale-z: 1 !important;
+}
+
+html[data-theme="just-kidding"] body :is(img, svg, input, textarea, button, a, p, span, div) {
+    filter: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
+
+@keyframes softBounce {
+  0%, 100% {
+    transform: translateY(0) scale(var(--status-pixel-scale, 1));
+  }
+  50% {
+    transform: translateY(-3px) scale(var(--status-pixel-scale, 1));
+  }
+}
+
+.animate-soft-bounce {
+  --status-pixel-scale: 1;
+  animation: softBounce 1s infinite;
+}
+
+.pause-animation {
+  animation-play-state: paused;
+}
+
+html[data-theme="just-kidding"] .darker-allow-motion {
+    animation: softBounce 1s infinite !important;
+    transition: transform 200ms ease !important;
+}
+
+html[data-theme="just-kidding"] .darker-allow-motion:hover {
+    --status-pixel-scale: 1.02 !important;
+}
+
+html[data-theme="just-kidding"] .darker-allow-motion.pause-animation {
+    animation-play-state: paused !important;
+}
