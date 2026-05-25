@@ -121,7 +121,7 @@ const NavBar = ({ theme, cycleTheme }) => {
                         <img
                             src="/navButtons2.svg"
                             alt="Logo"
-                            className="w-12 md:w-14 lg:w-20 h-auto hover:cursor-pointer transition-transform duration-200
+                            className="w-18 md:w-20 lg:w-20 h-auto hover:cursor-pointer transition-transform duration-200
                             md:dark:[filter:brightness(1)_drop-shadow(0_0_8px_rgba(255,255,255,0.6))]
                             md:dark:hover:[filter:brightness(1.05)_drop-shadow(0_0_8px_rgba(255,255,255,0.8))]"
                             onClick={() => {

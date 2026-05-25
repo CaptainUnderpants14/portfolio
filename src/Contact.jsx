@@ -80,7 +80,7 @@ function Contact() {
 
                 {/* Heading */}
                 <div className="w-full pb-4 text-center text-4xl md:text-6xl font-pixelb dark:[filter:drop-shadow(0_0_12px_rgba(255,255,255,0.6))]">
-                    Let's Talk!
+                    Let's Build!
                 </div>
 
                 {/* Subtitle */}
@@ -119,7 +119,7 @@ function Contact() {
                                     required
                                     className="border-2 border-black rounded-lg p-2.5 bg-white text-black
                                     focus:outline-none focus:ring-2 focus:ring-black
-                                    dark:bg-zinc-300
+                                    dark:bg-zinc-100
                                     dark:[filter:brightness(1)_drop-shadow(0_0_8px_rgba(255,255,255,0.6))]
                                     dark:hover:[filter:drop-shadow(0_0_12px_rgba(255,255,255,0.8))]"
                                 />
@@ -137,7 +137,7 @@ function Contact() {
                                     required
                                     className="border-2 border-black rounded-lg p-2.5 bg-white text-black
                                     focus:outline-none focus:ring-2 focus:ring-black
-                                    dark:bg-zinc-300
+                                    dark:bg-zinc-100
                                     dark:[filter:brightness(1)_drop-shadow(0_0_8px_rgba(255,255,255,0.6))]
                                     dark:hover:[filter:drop-shadow(0_0_12px_rgba(255,255,255,0.8))]"
                                 />
@@ -155,7 +155,7 @@ function Contact() {
                                     required
                                     className="border-2 resize-none h-32 border-black rounded-lg p-2.5
                                     bg-white text-black focus:outline-none focus:ring-2 focus:ring-black
-                                    dark:bg-zinc-300
+                                    dark:bg-zinc-100
                                     dark:[filter:brightness(1)_drop-shadow(0_0_8px_rgba(255,255,255,0.6))]
                                     dark:hover:[filter:drop-shadow(0_0_12px_rgba(255,255,255,0.8))]"
                                 ></textarea>

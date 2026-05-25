@@ -63,16 +63,16 @@ function AboutMe() {
                     </div>
 
                     <ul 
-                        className="flex flex-col relative
+                        className="flex flex-col relative items-center justify-center
                         text-lg md:text-[24px] lg:text-[18px]
                         text-black font-semibold
-                        border-2 border-none bg-white
-                        rounded-lg text-left shadow-[0_0_25px_rgba(0,0,0,0.18)] 
-                        mx-auto w-[90%]
+                        border-2 border-none
+                        rounded-lg text-left shadow-xl
+                        mx-auto w-[90%] bg-[#DDD8FF]
 
                         h-[18rem] md:h-[24rem] lg:h-[22rem]
-                        py-5 px-8 lg:mb-4
-                        gap-10
+                        py-8 lg:mb-4
+                        space-y-8 lg:space-y-8
 
                         md:max-w-[28rem]
                         lg:max-w-[28rem]
@@ -88,7 +88,13 @@ function AboutMe() {
                             dark:hover:[filter:brightness(1.10)_drop-shadow(0_0_6px_rgba(255,255,255,0.8))]" 
                             onClick={() => {setOpen(true); playClickSound()}}
                         />
-                        <li>
+                        <li>React & React Native</li>
+                        <li>SpringBoot & Java</li>
+                        <li>PostgreSQL & MongoDB</li>
+                        <li>Rest APIs & Deployment</li>
+
+                        
+                        {/* <li>
                             <span className="flex items-center gap-3 justify-center">
                             Tech Stack
                             </span>
@@ -113,7 +119,7 @@ function AboutMe() {
                             <img src="DockerLogo.svg" alt="React" className="w-7 h-7 object-contain" />
                             <img src="gitLogo.svg" alt="React" className="w-7 h-7 object-contain" />
                             <img src="Amazon_Web_Services_Logo.png" alt="React" className="w-7 h-7 object-contain" />
-                        </li>
+                        </li> */}
                     </ul>
 
                     {open && (
@@ -129,7 +135,7 @@ function AboutMe() {
                                 bg-white
                                 dark:bg-zinc-900
 
-                                border-2 border-dashed
+                                border-2 border-dashed dark:border-none
                                 rounded-2xl
 
                                 p-6 md:p-10
@@ -172,7 +178,7 @@ function AboutMe() {
                         <li>2+ Years of experience</li>
                         <li>9+ Projects</li>
                         <li>3 Months Maintenance</li>
-                        <li>Full stack App and Web Development</li>
+                        <li>App & Web Development</li>
                     </ul>
 
                     

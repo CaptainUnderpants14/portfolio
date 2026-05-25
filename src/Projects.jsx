@@ -4,8 +4,8 @@ import { MdArrowOutward } from "react-icons/md";
 
 function Projects() {
     return(
-        <div className="h-[68%] border-b-2 border-dashed w-full flex items-center justify-center">
-            <div className="w-[100%] md:w-[78%] lg:w-[60vw] py-14">
+        <div className="h-[68%] border-b-2 border-dashed w-full flex items-center justify-center dark:bg-gradient-to-b dark:from-zinc-600 dark:via-black dark:to-zinc-700 dark:text-gray-200">
+            <div className="w-[84%] md:w-[78%] lg:w-[60vw] py-14">
                 <div className="relative flex items-center justify-center">
                     <img
                         src="/aboutme.svg"
@@ -15,7 +15,7 @@ function Projects() {
                         dark:[filter:brightness(0.94)_drop-shadow(0_0_16px_rgba(255,255,255,0.8))]"
                     />
 
-                    <p className="absolute  font-pixel inset-0 flex items-center justify-center text-[30px] font-bold z-10">
+                    <p className="absolute  font-pixel inset-0 flex items-center justify-center text-[30px] font-bold z-10 dark:text-black">
                         Projects
                     </p>
                 </div>
