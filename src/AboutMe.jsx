@@ -127,9 +127,9 @@ function AboutMe() {
                             <div
                                 className="
                                 flex flex-col
-                                relative
-                                w-[90%] lg:w-[80%]
-                                h-[85vh]
+                                relative 
+                                w-[90%] lg:w-[60%]
+                                h-[60vh] md:h-auto
                                 overflow-y-auto
 
                                 bg-white
@@ -145,15 +145,102 @@ function AboutMe() {
                                 <button
                                      onClick={() => {setOpen(false); playClickSound()}}
                                     className="
-                                    absolute top-4 right-6
+                                    absolute top-3 right-3
                                     text-3xl font-bold
                                     hover:scale-110
                                     transition-transform 
-                                    dark:[filter:brightness(1)_drop-shadow(0_0_10px_rgba(255,255,255,0.6))]
-                                    dark:hover:[filter:brightness(1.10)_drop-shadow(0_0_10px_rgba(255,255,255,0.8))]
+                                    dark:[filter:brightness(1)_drop-shadow(0_0_2px_rgba(255,255,255,0.6))]
+                                    dark:hover:[filter:brightness(1.10)_drop-shadow(0_0_6px_rgba(255,255,255,0.8))]
                                     "><img src=".\closeUI.svg" className="w-9 h-9 cursor-pointer"></img>
                                 </button>
-                            </div>
+                                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12 text-base sm:text-lg justify-items-stretch my-8">
+                                    {/* Frontend */}
+                                    <ul className="rounded-xl shadow-xl bg-white border border-gray-300
+                                    w-full flex flex-col justify-center text-center p-6 sm:p-7
+                                     dark:bg-zinc-800 dark:border-none dark:text-gray-200
+                                    dark:shadow-[inset_0_1px_3px_rgba(255,255,255,0.18),inset_0_-1px_2px_rgba(0,0,0,0.6)]">
+                                        <h3 className="font-pixelm text-xl sm:text-2xl mb-4">Frontend</h3>
+                                        <ul className="flex flex-col gap-3 text-sm sm:text-base">
+                                            <li className="flex items-center gap-3 justify-start">
+                                                <img className="w-7 h-auto" src="/HTMLlogo.svg" alt="HTML" />
+                                                Html
+                                            </li>
+                                            <li className="flex items-center gap-3 justify-start">
+                                                <img className="w-8 h-6" src="/tailwindcsslogo.png" alt="TailwindCSS" />
+                                                TailwindCSS
+                                            </li>
+                                            <li className="flex items-center gap-3 justify-start">
+                                                <img className="w-7 h-auto" src="/TsLogo.svg" alt="TypeScript" />
+                                                TypeScript
+                                            </li>
+                                            <li className="flex items-center gap-3 justify-start font-semibold">
+                                                <img className="w-7 h-auto" src="/ReactLogo.svg" alt="React" />
+                                                React
+                                            </li>
+                                            <li className="flex items-center gap-3 justify-start">
+                                                <img className="w-7 h-auto" src="/JavaScript logo.svg" alt="JavaScript" />
+                                                JavaScript
+                                            </li>
+                                        </ul>
+                                    </ul>
+
+                                    {/* Backend */}
+                                    <ul className="rounded-xl shadow-xl bg-white border border-gray-300
+                                    w-full flex flex-col justify-center text-center p-6 sm:p-7
+                                     dark:bg-zinc-800 dark:border-none dark:text-gray-200
+                                    dark:shadow-[inset_0_1px_3px_rgba(255,255,255,0.18),inset_0_-1px_2px_rgba(0,0,0,0.6)]">
+                                        <h3 className="font-pixelm text-xl sm:text-2xl mb-4">Backend</h3>
+                                        <ul className="flex flex-col gap-3 text-sm sm:text-base">
+                                            <li className="flex items-center gap-3 justify-start">
+                                                <img className="w-7 h-auto" src="/Javalogo.svg" alt="Java" />
+                                                Java
+                                            </li>
+                                            <li className="flex items-center gap-3 justify-start font-semibold">
+                                                <img className="w-7 h-auto" src="/spring-boot-1.svg" alt="Spring Boot" />
+                                                SpringBoot
+                                            </li>
+                                            <li className="flex items-center gap-3 justify-start">
+                                                <img className="w-7 h-auto" src="/sqllogo.svg" alt="MySQL" />
+                                                MySQL
+                                            </li>
+                                            <li className="flex items-center gap-3 justify-start">
+                                                <img className="w-7 h-auto" src="/postgreslogo.svg" alt="PostgreSQL" />
+                                                PostgreSQL
+                                            </li>
+                                            <li className="flex items-center gap-3 justify-start">
+                                                <img className="w-7 h-auto" src="/mongologo.svg" alt="MongoDB" />
+                                                MongoDB
+                                            </li>
+                                        </ul>
+                                    </ul>
+
+                                    {/* Tools */}
+                                    <ul className="rounded-xl shadow-xl bg-white border border-gray-300
+                                    w-full flex flex-col justify-center text-center p-6 sm:p-7
+                                     dark:bg-zinc-800 dark:border-none dark:text-gray-200
+                                    dark:shadow-[inset_0_1px_3px_rgba(255,255,255,0.18),inset_0_-1px_2px_rgba(0,0,0,0.6)]">
+                                        <h3 className="font-pixelm text-xl sm:text-2xl mb-4">Tools</h3>
+                                        <ul className="flex flex-col gap-3 text-sm sm:text-base">
+                                            <li className="flex items-center gap-3 justify-start font-semibold">
+                                                <img className="w-7 h-auto" src="/DockerLogo.svg" alt="Docker" />
+                                                Docker
+                                            </li>
+                                            <li className="flex items-center gap-3 justify-start">
+                                                <img className="w-7 h-auto" src="/gitLogo.svg" alt="Git" />
+                                                Git
+                                            </li>
+                                            <li className="flex items-center gap-3 justify-start">
+                                                <img className="w-7 h-auto" src="/Amazon_Web_Services_Logo.png" alt="AWS" />
+                                                AWS
+                                            </li>
+                                            <li className="flex items-center gap-3 justify-start">
+                                                <img className="w-7 h-auto" src="/githubLogo2.svg" alt="AWS" />
+                                                Github Actions
+                                            </li>
+                                        </ul>
+                                    </ul>
+                                </div>
+                            </div>  
                         </div>
                         )}
                     {/* Experience */}
