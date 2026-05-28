@@ -221,12 +221,6 @@ const NavBar = ({ theme, cycleTheme }) => {
                                 </li>
                                 <li
                                     className="font-bold cursor-pointer hover:text-xl transition-transform duration-200 whitespace-nowrap w-full py-2"
-                                    onClick={() => scrollToSection("skills")}
-                                >
-                                    Skills
-                                </li>
-                                <li
-                                    className="font-bold cursor-pointer hover:text-xl transition-transform duration-200 whitespace-nowrap w-full py-2"
                                     onClick={() => scrollToSection("projects")}
                                 >
                                     Projects
