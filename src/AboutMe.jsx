@@ -123,7 +123,7 @@ function AboutMe() {
                     </ul>
 
                     {open && (
-                        <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50 px-4">
+                        <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50 px-4 backdrop-blur-sm">
                             <div
                                 className="
                                 flex flex-col

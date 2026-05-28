@@ -82,8 +82,10 @@ function Projects() {
                             <img src="./statusDead.svg" alt="Status Active" className="w-6 mx-2"/>
                     </div>
                     <p className="text-lg mt-2">
-                        An AI-Powered Mobile app for curios minds with dynamic content generation on any topic of choice, As-Per-Need learning paths, Quiz functionality, easter eggs and  interactive features to enhance student engagement.
-                    </p>
+                        A FHIR R4 compliant healthcare terminology integration platform to integrate NAMASTE, WHO ICD-11 TM2, 
+                        and Biomedicine codes into 
+                        EMR systems, enabling dual coding, terminology mapping, secure REST APIs, and interoperable healthcare record 
+                        management compliant with India's EHR standards (SIH 25, Problem 26).</p>
                 </div>
             </div>
         </div>
