@@ -82,7 +82,6 @@ function App() {
             <main>
                 <AboutMe/>
                 <Projects/>
-                {/* <Skills/> */}
                 <Contact/>
                 <Footer/>
             </main>

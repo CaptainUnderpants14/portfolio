@@ -4,7 +4,9 @@ import { MdArrowOutward } from "react-icons/md";
 
 function Projects() {
     return(
-        <div className="h-[68%] border-b-2 border-dashed w-full flex items-center justify-center dark:bg-gradient-to-b dark:from-zinc-600 dark:via-black dark:to-zinc-700 dark:text-gray-200">
+        <div
+            id="projects" 
+            className="h-[68%] border-b-2 border-dashed w-full flex items-center justify-center dark:bg-gradient-to-b dark:from-zinc-600 dark:via-black dark:to-zinc-700 dark:text-gray-200">
             <div className="w-[84%] md:w-[78%] lg:w-[60vw] py-14">
                 <div className="relative flex items-center justify-center">
                     <img
