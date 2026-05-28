@@ -141,7 +141,7 @@ const NavBar = ({ theme, cycleTheme }) => {
                         <li
                             className="font-bold hover:cursor-pointer hover:scale-105 transition-transform duration-200 whitespace-nowrap"
                             onClick={() => {
-                                scrollToSection("");
+                                scrollToSection("projects");
                                 playClickSound();
                             }}>
                             Projects
