@@ -1,4 +1,6 @@
 import { useRef, useState } from "react";
+import { BiSolidTorch } from "react-icons/bi";
+
 
 const themeLabels = {
     light: "Light",
@@ -51,11 +53,7 @@ const MobileThemeToggleButton = ({ theme, onClick }) => {
                 />
             )}
             {theme === "dark" && (
-                <img
-                    src="/lightTheme.png"
-                    alt=""
-                    className="w-6 h-auto [filter:drop-shadow(0_0_6px_rgba(255,255,255,0.9))]"
-                />
+                <BiSolidTorch className="w-5 h-auto [filter:drop-shadow(0_0_6px_rgba(255,255,255,0.9))]"/>
             )}
             {theme === "just-kidding" && (
                 <img
@@ -138,7 +136,7 @@ const NavBar = ({ theme, cycleTheme }) => {
                                 scrollToSection("about");
                                 playClickSound();
                             }}>
-                            Work
+                            About
                         </li>
                         <li
                             className="font-bold hover:cursor-pointer hover:scale-105 transition-transform duration-200 whitespace-nowrap"
@@ -219,7 +217,7 @@ const NavBar = ({ theme, cycleTheme }) => {
                                     className="font-bold cursor-pointer transition-transform duration-200 hover:text-xl whitespace-nowrap w-full py-2"
                                     onClick={() => scrollToSection("about")}
                                 >
-                                    Work
+                                    About
                                 </li>
                                 <li
                                     className="font-bold cursor-pointer hover:text-xl transition-transform duration-200 whitespace-nowrap w-full py-2"
