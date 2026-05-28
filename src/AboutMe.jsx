@@ -135,11 +135,12 @@ function AboutMe() {
                                 bg-white
                                 dark:bg-zinc-900
 
-                                border-2 border-dashed dark:border-none
+                                border-2 border-none 
                                 rounded-2xl
 
                                 p-6 md:p-10
-                                shadow-2xl dark:shadow-[inset_0_1px_3px_rgba(255,255,255,0.18),inset_0_-1px_2px_rgba(0,0,0,0.6)]">
+                                shadow-[inset_0_1px_3px_rgba(255,255,255,0.18),inset_0_-1px_2px_rgba(0,0,0,0.6)]
+                                dark:shadow-[inset_0_1px_3px_rgba(255,255,255,0.18),inset_0_-1px_2px_rgba(0,0,0,0.6)]">
 
                                 {/* Close Button */}
                                 <button
