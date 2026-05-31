@@ -241,7 +241,7 @@ function Contact() {
                                     className="group"
                                 >
                                     <img
-                                        src="/instalogo.svg"
+                                        src="/instaLogo.png"
                                         alt="Instagram Logo"
                                         className="w-9 sm:w-10 h-auto transition-transform duration-200 group-hover:scale-110
                                         dark:[filter:brightness(0.90)_drop-shadow(0_0_8px_rgba(255,255,255,0.6))]
@@ -320,7 +320,7 @@ function Contact() {
                             className="group lg:self-end"
                         >
                             <img
-                                src="/instalogo.svg"
+                                src="/instaLogo.png"
                                 alt="Instagram Logo"
                                 className="w-9 sm:w-10 lg:w-14 h-auto transition-transform duration-200 group-hover:scale-110 lg:rotate-3
                                 dark:[filter:brightness(0.90)_drop-shadow(0_0_8px_rgba(255,255,255,0.6))]

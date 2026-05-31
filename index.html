@@ -4,6 +4,26 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (() => {
+        const themeCycle = ["light", "dark", "just-kidding"];
+        const savedTheme = localStorage.getItem("theme");
+        const systemPrefersDark =
+          window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const theme = themeCycle.includes(savedTheme)
+          ? savedTheme
+          : systemPrefersDark
+            ? "dark"
+            : "light";
+        const isDarkTheme = theme !== "light";
+        const root = document.documentElement;
+
+        root.classList.toggle("dark", isDarkTheme);
+        root.dataset.theme = theme;
+        root.style.colorScheme = isDarkTheme ? "dark" : "light";
+      })();
+    </script>
     <title>Paras's Portfolio</title>
   </head>
   <body>

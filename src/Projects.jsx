@@ -3,6 +3,10 @@ import { MdArrowOutward } from "react-icons/md";
 
 
 function Projects() {
+    const playMessageSound = () => {
+        const audio = new Audio("/sounds/messageSound.mp3");
+        audio.play();
+    };
     return(
         <div
             id="projects" 
@@ -88,6 +92,25 @@ function Projects() {
                         and Biomedicine codes into 
                         EMR systems, enabling dual coding, terminology mapping, secure REST APIs, and interoperable healthcare record 
                         management compliant with India's EHR standards (SIH 25, Problem 26).</p>
+                </div>
+                {/* Phone and Convo bubble icons */}
+                <div className="flex relative">
+                <img
+                    src="/Phone.svg"
+                    alt="Phone icon"
+                    // onClick={playDialerSound}
+                    className="absolute w-14 top-4 md:w-18 z-10 md:top-6 md:left-10 h-auto hover:cursor-pointer hover:scale-110 transition-transform duration-200
+                    dark:[filter:brightness(0.95)_drop-shadow(0_0_8px_rgba(255,255,255,0.6))]
+                                 dark:hover:[filter:drop-shadow(0_0_12px_rgba(255,255,255,0.8))]"
+                />
+                <img
+                    src="/convoBubble.svg"
+                    alt="Text bubble icon"
+                    onClick={playMessageSound}
+                    className="absolute w-20 top-4 right-4 md:w-20 z-10 md:top-4 md:right-20 h-auto hover:cursor-pointer hover:scale-110 transition-transform duration-200
+                   dark:[filter:brightness(0.85)_drop-shadow(0_0_8px_rgba(255,255,255,0.6))]
+                                 dark:hover:[filter:brightness(0.95)_drop-shadow(0_0_12px_rgba(255,255,255,0.8))]"
+                />
                 </div>
             </div>
         </div>

@@ -15,6 +15,20 @@
     --jk-y: 50vh;
 }
 
+html,
+body,
+#root {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    background: #fff;
+}
+
+html.dark body {
+    background: #000;
+}
 
 html[data-theme="just-kidding"],
 html[data-theme="just-kidding"] body {
