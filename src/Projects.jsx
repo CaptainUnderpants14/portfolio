@@ -8,8 +8,9 @@ function Projects() {
         audio.play();
     };
     return(
-        <div
+        <section
             id="projects" 
+            aria-labelledby="projects-title"
             className="h-[68%] border-b-2 border-dashed w-full flex items-center justify-center dark:bg-gradient-to-b dark:from-zinc-600 dark:via-black dark:to-zinc-700 dark:text-gray-200">
             <div className="w-[84%] md:w-[78%] lg:w-[60vw] py-14">
                 <div className="relative flex items-center justify-center">
@@ -21,9 +22,12 @@ function Projects() {
                         dark:[filter:brightness(0.94)_drop-shadow(0_0_16px_rgba(255,255,255,0.8))]"
                     />
 
-                    <p className="absolute  font-pixel inset-0 flex items-center justify-center text-[30px] font-bold z-10 dark:text-black">
+                    <h2
+                        id="projects-title"
+                        className="absolute font-pixel inset-0 flex items-center justify-center text-[30px] font-bold z-10 dark:text-black"
+                    >
                         Projects
-                    </p>
+                    </h2>
                 </div>
 
                 <div className="mt-14">
@@ -113,7 +117,7 @@ function Projects() {
                 />
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
 export default Projects;

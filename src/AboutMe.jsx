@@ -17,8 +17,9 @@ function AboutMe() {
     };
 
     return (
-        <div
+        <section
             id="about"
+            aria-labelledby="about-title"
             className="border-b-2 pb-6 border-dashed border-black flex justify-center relative dark:bg-gradient-to-b dark:from-black dark:to-zinc-700
              dark:border-white">
             <div className="w-[92%] md:w-[78%] xl:w-[60vw] mx-auto relative">
@@ -45,13 +46,14 @@ function AboutMe() {
                                      dark:[filter:brightness(0.94)_drop-shadow(0_0_16px_rgba(255,255,255,0.8))]"
 
                             />
-                            <p
+                            <h2
+                                id="about-title"
                             // items-center justify-center
                                 className="font-pixelb absolute inset-0 flex items-center justify-center
                                        text-xl sm:text-[1.35rem] md:text-[2.4rem] lg:text-[1.8rem] whitespace-nowrap
                                        font-extrabold text-black tracking-wide text-center transition-all duration-200 ">
                                 About Me
-                            </p>
+                            </h2>
                         </div>
 
                         <p className="text-md mx-auto md:text-[24px] lg:text-[18px] leading-7 sm:leading-8 w-[88%] max-w-md text-justify dark:text-white md:pb-4">
@@ -280,7 +282,7 @@ function AboutMe() {
                                  dark:hover:[filter:brightness(0.96)_drop-shadow(0_0_12px_rgba(255,255,255,0.8))]"
                 />
             </div>
-        </div>
+        </section>
     );
 }
 

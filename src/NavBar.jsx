@@ -244,7 +244,9 @@ const NavBar = ({ theme, cycleTheme }) => {
                 />
             )}
 
-            <div
+            <section
+                id="home"
+                aria-labelledby="hero-title"
                 className="w-full bg-[#e2cdf4] border-b-2 border-dashed border-black
                 pt-15 dark:bg-gradient-to-b dark:from-zinc-600 dark:to-black
                 dark:border-white"
@@ -318,12 +320,13 @@ const NavBar = ({ theme, cycleTheme }) => {
                 Hello,
             </p>
 
-            <p
+            <h1
+                id="hero-title"
                 className="text-4xl md:text-5xl lg:text-6xl
                 font-bold tracking-wide md:mb-3"
             >
                 I'm Paras Sharma,
-            </p>
+            </h1>
 
             <p
                 className="text-xl md:text-2xl lg:text-[26px]
@@ -385,7 +388,7 @@ const NavBar = ({ theme, cycleTheme }) => {
             />
         </div>
     </div>
-</div>
+</section>
         </div>
     );
 };

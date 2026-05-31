@@ -72,16 +72,20 @@ function Contact() {
     };
 
     return (
-        <div
+        <section
             id="contact"
+            aria-labelledby="contact-title"
             className="relative border-b-2 py-12 border-dashed border-black px-5 lg:px-8 dark:bg-gradient-to-b dark:from-zinc-600 dark:via-black dark:to-zinc-700 dark:border-white"
         >
             <div className="w-[92%] md:w-[78%] xl:w-[60vw] max-w-[980px] mx-auto dark:text-gray-200">
 
                 {/* Heading */}
-                <div className="w-full pb-4 text-center text-4xl md:text-6xl font-pixelb dark:[filter:drop-shadow(0_0_12px_rgba(255,255,255,0.6))]">
+                <h2
+                    id="contact-title"
+                    className="w-full pb-4 text-center text-4xl md:text-6xl font-pixelb dark:[filter:drop-shadow(0_0_12px_rgba(255,255,255,0.6))]"
+                >
                     Let's Build!
-                </div>
+                </h2>
 
                 {/* Subtitle */}
                 <div className="text-lg md:text-2xl pb-8 lg:text-2xl max-w-2xl md:max-w-4xl mx-auto text-center font-semibold">
@@ -331,7 +335,7 @@ function Contact() {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
 
