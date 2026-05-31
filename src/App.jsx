@@ -8,7 +8,7 @@ import Footer from "./Footer.jsx";
 import { useEffect, useRef, useState } from "react";
 
 const THEME_CYCLE = ["light", "dark", "just-kidding"];
-const MINIMUM_LOADING_TIME_MS = 450;
+const MINIMUM_LOADING_TIME_MS = 800;
 const CRITICAL_ASSETS = {
     light: [
         "/navButtons2.svg",
