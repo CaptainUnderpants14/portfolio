@@ -28,7 +28,7 @@ function AboutMe() {
                     src="/controller.svg"
                     alt="Controller Icon"
                     onClick={playControllerSound}
-                    className="absolute left-[70%] md:left-[8%] -top-15 md:-top-18 w-[22%] md:w-[16%] lg:w-[12%] h-auto hover:cursor-pointer hover:scale-110
+                    className="absolute left-[70%] md:left-[8%] -top-16 md:-top-18 w-22 md:w-[16%] lg:w-[12%] h-auto hover:cursor-pointer hover:scale-110
                     transition-transform duration-200
                     dark:[filter:brightness(0.95)_drop-shadow(0_0_8px_rgba(255,255,255,0.6))]
                                  dark:hover:[filter:drop-shadow(0_0_12px_rgba(255,255,255,0.8))]"
