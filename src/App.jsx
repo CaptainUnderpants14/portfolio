@@ -9,6 +9,23 @@ import { useEffect, useRef, useState } from "react";
 
 const THEME_CYCLE = ["light", "dark", "just-kidding"];
 const MINIMUM_LOADING_TIME_MS = 800;
+const TECH_STACK_ASSETS = [
+    "/HTMLlogo.svg",
+    "/tailwindcsslogo.png",
+    "/TsLogo.svg",
+    "/ReactLogo.svg",
+    "/JavaScript logo.svg",
+    "/Javalogo.svg",
+    "/spring-boot-1.svg",
+    "/sqllogo.svg",
+    "/postgreslogo.svg",
+    "/mongologo.svg",
+    "/DockerLogo.svg",
+    "/gitLogo.svg",
+    "/Amazon_Web_Services_Logo.png",
+    "/githubLogo2.svg",
+];
+
 const CRITICAL_ASSETS = {
     light: [
         "/navButtons2.svg",
@@ -16,6 +33,7 @@ const CRITICAL_ASSETS = {
         "/greendot.svg",
         "/Screen3.svg",
         "/Keyboard6.svg",
+        ...TECH_STACK_ASSETS,
     ],
     dark: [
         "/navButtons2.svg",
@@ -23,6 +41,7 @@ const CRITICAL_ASSETS = {
         "/greendot.svg",
         "/screenDark.svg",
         "/keyboardDark.svg",
+        ...TECH_STACK_ASSETS,
     ],
     "just-kidding": [
         "/navButtons2.svg",
@@ -30,6 +49,7 @@ const CRITICAL_ASSETS = {
         "/greendot.svg",
         "/screenDark.svg",
         "/keyboardDark.svg",
+        ...TECH_STACK_ASSETS,
     ],
 };
 
