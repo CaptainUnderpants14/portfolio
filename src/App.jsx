@@ -34,6 +34,7 @@ const CRITICAL_ASSETS = {
         "/Screen3.svg",
         "/Keyboard6.svg",
         ...TECH_STACK_ASSETS,
+        "finalClick.mp3"
     ],
     dark: [
         "/navButtons2.svg",
@@ -42,6 +43,7 @@ const CRITICAL_ASSETS = {
         "/screenDark.svg",
         "/keyboardDark.svg",
         ...TECH_STACK_ASSETS,
+        "finalClick.mp3"
     ],
     "just-kidding": [
         "/navButtons2.svg",
@@ -50,6 +52,7 @@ const CRITICAL_ASSETS = {
         "/screenDark.svg",
         "/keyboardDark.svg",
         ...TECH_STACK_ASSETS,
+        "finalClick.mp3"
     ],
 };
 
