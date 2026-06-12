@@ -60,7 +60,7 @@ function Projects() {
                         </p>
                         <div className="flex gap-2">
                             <FaGithub size={28} className="hover:cursor-pointer hover:scale-102 duration-200" 
-                            onClick={() => window.open("https://github.com/CaptainUnderpants14", "_blank")}/>
+                            onClick={() => window.open("https://github.com/CaptainUnderpants14/iconic", "_blank")}/>
 
                             <MdArrowOutward size={28} className="hover:cursor-pointer hover:scale-102"
                             onClick={() => window.open("https://github.com/CaptainUnderpants14", "_blank")}/>
@@ -81,10 +81,9 @@ function Projects() {
                         </p>
                         <div className="flex gap-2">
                             <FaGithub size={28} className="hover:cursor-pointer hover:scale-102 duration-200" 
-                            onClick={() => window.open("https://github.com/CaptainUnderpants14", "_blank")}/>
-
+                            onClick={() => window.open("https://github.com/CaptainUnderpants14/param-ayush", "_blank")}/>
                             <MdArrowOutward size={28} className="hover:cursor-pointer hover:scale-102"
-                            onClick={() => window.open("https://github.com/CaptainUnderpants14", "_blank")}/>
+                            onClick={() => window.open("https://param-ayush.vercel.app/", "_blank")}/>
                         </div>
                     </div>
                     <div className="flex py-2">
