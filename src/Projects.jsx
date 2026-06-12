@@ -41,8 +41,8 @@ function Projects() {
                             <FaGithub size={30} className="hover:cursor-pointer hover:scale-102 duration-200" 
                             onClick={() => window.open("https://github.com/CaptainUnderpants14/FoxyAi", "_blank")}/>
 
-                            <MdArrowOutward size={30} className="hover:cursor-pointer hover:scale-102"
-                            onClick={() => window.open("https://github.com/CaptainUnderpants14", "_blank")}/>
+                            {/* <MdArrowOutward size={30} className="hover:cursor-pointer hover:scale-102"
+                            onClick={() => window.open("https://github.com/CaptainUnderpants14", "_blank")}/> */}
                         </div>
                     </div>
                     <div className="flex py-2">
