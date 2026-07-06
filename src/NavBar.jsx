@@ -307,7 +307,7 @@ const NavBar = ({ theme, cycleTheme }) => {
 
                     alt="Green Dot"
                 />
-                <p className="font-pixel">Available For Work</p>
+                <p className="font-pixel">Currently Working</p>
             </div>
             <p
                 className="font-pixel
