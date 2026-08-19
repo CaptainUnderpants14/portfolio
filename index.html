@@ -1,34 +1,31 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Paras Sharma</title>
-    <meta
-      name="description"
-      content="Paras Sharma"
-    />
-    <meta name="robots" content="index, follow" />
-    <meta name="author" content="Paras Sharma" />
-    <link rel="canonical" href="https://sharmaparas.vercel.app" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://sharmaparas.vercel.app" />
-    <meta property="og:title" content="Paras Sharma" />
-    <meta
-      property="og:description"
-      content="Paras Sharma's portfolio full stack developer"
-    />
-    <meta property="og:image" content="https://sharmaparas.vercel.app/ServerArt.svg" />
-    <meta property="og:site_name" content="Paras Sharma Portfolio" />
-    <meta name="twitter:card" content="" />
-    <meta name="twitter:title" content="Paras Sharma" />
-    <meta
-      name="twitter:description"
-      content="Full stack web and mobile developer."
-    />
-    <meta name="twitter:image" content="https://sharmaparas.vercel.app/ServerArt.svg" />
-    <script type="application/ld+json">
+
+<head>
+  <meta name="google-site-verification" content="jcGmgYbC_ann5ZnkY6LtQgGDQL0QI6ZwZnszPBxA2Iw" />
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Paras Sharma | Full Stack Developer & Backend Engineer</title>
+
+  <meta name="description"
+    content="Paras Sharma is a Full Stack Developer specializing in React, Spring Boot, Java, REST APIs, PostgreSQL, Redis, and modern web application development. Explore his projects, technical experience, and work in backend engineering, scalable systems, and software development." />
+
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Paras Sharma" />
+  <link rel="canonical" href="https://sharmaparas.vercel.app" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sharmaparas.vercel.app" />
+  <meta property="og:title" content="Paras Sharma" />
+  <meta property="og:description" content="Paras Sharma's portfolio full stack developer" />
+  <meta property="og:image" content="https://sharmaparas.vercel.app/ServerArt.svg" />
+  <meta property="og:site_name" content="Paras Sharma Portfolio" />
+  <meta name="twitter:card" content="" />
+  <meta name="twitter:title" content="Paras Sharma" />
+  <meta name="twitter:description" content="Full stack web and mobile developer." />
+  <meta name="twitter:image" content="https://sharmaparas.vercel.app/ServerArt.svg" />
+  <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Person",
@@ -44,29 +41,31 @@
         ]
       }
     </script>
-    <script>
-      (() => {
-        const themeCycle = ["light", "dark", "just-kidding"];
-        const savedTheme = localStorage.getItem("theme");
-        const systemPrefersDark =
-          window.matchMedia &&
-          window.matchMedia("(prefers-color-scheme: dark)").matches;
-        const theme = themeCycle.includes(savedTheme)
-          ? savedTheme
-          : systemPrefersDark
-            ? "dark"
-            : "light";
-        const isDarkTheme = theme !== "light";
-        const root = document.documentElement;
+  <script>
+    (() => {
+      const themeCycle = ["light", "dark", "just-kidding"];
+      const savedTheme = localStorage.getItem("theme");
+      const systemPrefersDark =
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const theme = themeCycle.includes(savedTheme)
+        ? savedTheme
+        : systemPrefersDark
+          ? "dark"
+          : "light";
+      const isDarkTheme = theme !== "light";
+      const root = document.documentElement;
 
-        root.classList.toggle("dark", isDarkTheme);
-        root.dataset.theme = theme;
-        root.style.colorScheme = isDarkTheme ? "dark" : "light";
-      })();
-    </script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+      root.classList.toggle("dark", isDarkTheme);
+      root.dataset.theme = theme;
+      root.style.colorScheme = isDarkTheme ? "dark" : "light";
+    })();
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>
